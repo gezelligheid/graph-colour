@@ -158,8 +158,9 @@ public class ReadGraph
 		    		//  System.out.println(line);
 		    	 // }
 
+					 //initiates L for testing
 					 int[] L = new int[0];
-
+					 //tests finished method
 					 System.out.println(finished(L,n));
 
 		}
@@ -171,10 +172,10 @@ public class ReadGraph
 	 L[0] is an integer representing the colour (1 is the first colour, say blue. Then 2 is red, etc).
 	 The function returns true if all nodes have a colour.
 	**/
-	public static boolean finished(int[] L, int n){
-        //compares the length of coloured element list to the number of vertices
-        return (L.length == n);
 
+	//compares the length of coloured element list to the number of vertices
+	public static boolean finished(int[] L, int n){
+			return (L.length == n);
     }
 
 	
