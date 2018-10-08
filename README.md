@@ -1,2 +1,2 @@
 #GCP
-ultimate graph colouring
+ultimate graph colouring algos
