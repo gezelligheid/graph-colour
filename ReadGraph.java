@@ -125,10 +125,60 @@ public class ReadGraph
 			//! INSERT YOUR CODE HERE!
 
 
+			// Code to compute an adjacency matrix (variable a)
 
+		 	 // l is the number of nodes in the graph minus one
+		    	 int l = e.length-1;
+		 // Create the adjacency matrix a of size nxn, where n is the number of nodes
+		    	 boolean[][] a = new boolean[n][n];
 
+		 	 // Go through every element in a
+		    	 for (int i = 0; i < n; i++) {
+		    		 for (int j = 0; j < n; j++) {
+		 			 // Go through every edge in e
+		    			 for (int k = 0; k < l+1; k++) {
+		 // If an edge represents the current place in the matrix, then set a to true
+		    				 if (e[k].u == i+1 && e[k].v == j+1) {
+		    					 a[i][j] = true;
+		 					 // Adjacency matrices are symmetric
+		    					 a[j][i] = true;
+		    				 }
+		    			 }
+		 // If we haven't already set a to true, then set it to false. Otherwise it would be empty there.
+		    			 if (!a[i][j]) { a[i][j] = false; }
+		    		 }
+		    	 }
+		    	 // Optional: print the adjacency matrix to console
+		    	 // for (int i = 0; i < n; i++) {
+		    		//  String line = "";
+		    		//  for (int j = 0; j < n; j++) {
+		    		// 	 if (a[i][j]) { line += "1 "; }
+		    		// 	 else   	  { line += "0 "; }
+		    		//  }
+		    		//  System.out.println(line);
+		    	 // }
 
+					 int[] L = new int[0];
+
+					 System.out.println(finished(L,n));
 
 		}
+	/**
+	"finished" function, which takes as input
+	 - a list of integers L[] representing which nodes have which colours already.
+	 Every node in every graph is labelled 1, 2, ... n, which means they can be referenced as an array.
+	 L[0] is thus the colour of node 1.
+	 L[0] is an integer representing the colour (1 is the first colour, say blue. Then 2 is red, etc).
+	 The function returns true if all nodes have a colour.
+	**/
+	public static boolean finished(int[] L, int n){
+        //compares the length of coloured element list to the number of vertices
+        return (L.length == n);
+
+    }
+
+	
+
+
 
 }
