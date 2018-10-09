@@ -161,7 +161,7 @@ public class ReadGraph
 					 //initiates L for testing
 					 int[] L = new int[0];
 					 //tests finished method
-					 System.out.println(finished(L,n));
+					 //System.out.println(finished(L,n));
 
 		}
 	/**
@@ -177,8 +177,36 @@ public class ReadGraph
 	public static boolean finished(int[] L, int n){
 			return (L.length == n);
     }
+// "next node" function, which takes as input
+// - a list of integers L[]: which nodes have which colours
+// - an integer N representing the current node
+// - an adjacency matrix boolean a[][]
+// The function returns an integer M telling which node should be chosen next.
+// Again, for now it can be random or something,
+// but later it will be helpful to keep this as a separate piece of code,
+// when choosing the next might be more complicated.
 
-	
+	public static int nextNodeWP(int[] L, int N, int[][] adj, int[] Deg){
+		// welsh powel
+		int M = N + 1;
+		for (int i = 0; i < L.length - 1; ) {
+
+		}
+		return M;
+	}
+	public static int Degree(int nodeNum, boolean[][]AdMatrix, int v){
+      int k=0; // Variable to count the node's neighbours
+      for(int i=0; i<v; i++)// V= number of vertices
+			{
+   	 if(AdMatrix[nodeNum][i]==true) k++; // it can be (0,1)
+
+   	 /* if(AdMatrix[i][nodeNum]==true)// but also (1,0) and both of them are connected to the node 0, thus are valid.
+   	 k++; */
+      }
+			return k;
+    }
+
+
 
 
 
