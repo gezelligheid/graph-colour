@@ -4,7 +4,6 @@ ultimate graph colouring algos
 
 -- Functions needed for p2 games --
 
-# https://blog.bulletproof.com/how-to-make-your-coffee-bulletproof-and-your-morning-too/
 
 all game modes
 
@@ -12,13 +11,13 @@ all game modes
 
 	/**
 	* function to display all the edges of the graph, coloured correctly, must check whether the current colouration is legal
-	* @param
+	* @param 
 	* @return
 	*/
 	
 	/**
 	* function to display all the vertices of the graph, coloured according to the player
-	* @param
+	* @param Vertex[] V - a list of all vertices, with V.x and V.y as its coordinates and V.colour[3] its rgb colour. See the end of the file Drawing.java for the full Vertex class.
 	* @return
 	*/
 	
