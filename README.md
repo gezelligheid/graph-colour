@@ -11,7 +11,8 @@ all game modes
 
 	/**
 	* function to display all the edges of the graph, coloured correctly, must check whether the current colouration is legal
-	* @param 
+	* @param Edge[] e - a list of all edges, with e.u and e.v are the indices+1 of the vertices of this edge
+	* @param Vertex[] V - a list of all vertices, with V.x and V.y as the coordinates
 	* @return
 	*/
 	
@@ -23,19 +24,27 @@ all game modes
 	
 	/**
 	* function to display the selection box, and which colour is currently selected
-	* @param
+	* @param int[3] selectedColour - the rgb values of the selected colour
+	* @param int[][3] availableColours - the rgb values of all available colours
 	* @return
 	*/
 	
 	/**
-	* function to check whether the player has clicked on a vertex or a colour in the selection box
-	* @param
-	* @return
+	* function to check whether the player has clicked on a vertex
+	* @param int[2] clickPosition - the coordinates of the player's click
+	* @return int index - the index of the vertex that the player clicked, or else -1 if none was
+	*/
+	
+	/**
+	* function to check whether the player has clicked on a colour in the selection box
+	* @param int[2] clickPosition - the coordinates of the player's click
+	* @return int index - the index of the colour in the selection box that was clicked, or else -1 if none was
 	*/
 	
 	/**
 	* function to generate random graphs
-	* @param
+	* @param int vertices - number of vertices
+	* @param int edges - number of edges
 	* @return
 	*/
 	
