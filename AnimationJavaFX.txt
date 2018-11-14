@@ -11,9 +11,9 @@ public void start(Stage theStage)
  
     GraphicsContext gc = canvas.getGraphicsContext2D();
  
-    Image earth = new Image( "earth.png" );
+    /*Image earth = new Image( "earth.png" );
     Image sun   = new Image( "sun.png" );
-    Image space = new Image( "space.png" );
+    Image space = new Image( "space.png" );*/
  
     final long startNanoTime = System.nanoTime();
  
@@ -23,13 +23,13 @@ public void start(Stage theStage)
         {
             double t = (currentNanoTime - startNanoTime) / 1000000000.0; 
  
-            double x = 232 + 128 * Math.cos(t);
+            /*double x = 232 + 128 * Math.cos(t);
             double y = 232 + 128 * Math.sin(t);
  
             // background image clears canvas
             gc.drawImage( space, 0, 0 );
             gc.drawImage( earth, x, y );
-            gc.drawImage( sun, 196, 196 );
+            gc.drawImage( sun, 196, 196 );*/
         }
     }.start();
  
