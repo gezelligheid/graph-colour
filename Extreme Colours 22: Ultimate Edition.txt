@@ -44,19 +44,29 @@ public void start(Stage theStage)
             */
             if (gamemode == -1) {
                 /* They just won, display a big nice happy thing
+                * there'll be a button to take them back to the title screen, gamemode 0
                 */
             }
             else if (gamemode == 0) {
                 /* Display the title screen
                 */
             } else if (gamemode == 1 || gamemode == 2 || gamemode == 3) {
-                /* Display the graph
+                /* Display the edges
+                * display the vertices
                 * display the colour selection box
+                * display the timer
+                * display the total number of colours used so far
+                */
+            }
+            
+            if (gamemode == 3) {
+                /* Display a selection circle around the vertex that must be coloured next
                 */
             }
             
             
-            /* Check to see if the game is finished. If so, set their gamemode to 1.
+            /* Check to see if the game is finished. If so, set their gamemode to -1 (win)
+            * Check to see if they've run out of time, in the best upper bound gamemode. If so, gamemode = -2 (loss)
             */
         }
     }.start();
