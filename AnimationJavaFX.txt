@@ -14,6 +14,11 @@ public void start(Stage theStage)
     /*Image earth = new Image( "earth.png" );
     Image sun   = new Image( "sun.png" );
     Image space = new Image( "space.png" );*/
+    
+    /* All initialization code, that runs at the beginning
+    * All event handlers, ie those things that listen to the mouse and keyboard
+    */
+    
  
     final long startNanoTime = System.nanoTime();
  
@@ -30,6 +35,18 @@ public void start(Stage theStage)
             gc.drawImage( space, 0, 0 );
             gc.drawImage( earth, x, y );
             gc.drawImage( sun, 196, 196 );*/
+            
+            
+            
+            if (gamemode == 0) {
+                /* Display the title screen
+                */
+            } else if (gamemode == 1) {
+                /* Display the graph
+                * display the colour selection box
+                */
+            }
+            
         }
     }.start();
  
