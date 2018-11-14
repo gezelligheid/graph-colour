@@ -47,7 +47,7 @@ all game modes
 	* function to generate random graphs
 	* @param int vertices - number of vertices
 	* @param int edges - number of edges
-	* @return 
+	* @return boolean[][] a - an adjacency matrix representing the graph
 	*/
 	
 }
@@ -55,18 +55,13 @@ all game modes
 1st two game modes: bitter end, best upper bound
 
 {
-	
-	/**
-	* timer that ends the game
-	* @param
-	* @return
-	*/
-	
+
 	/**
 	* hint function for when you can choose which node to colour next
-	* @param
-	* @return
+	* @param many probably
+	* @return int index - the index of the vertex that the hint suggests
 	*/
+	
 }
 
 3rd game mode: random order
@@ -75,13 +70,13 @@ all game modes
 
 	/**
 	* function to choose an order in the graph
-	* @param
-	* @return
+	* @param boolean[][] a - an adjacency matrix representing the graph
+	* @return int[] order - a list of integers, where the first integer is the index of the first node that must be coloured, etc.
 	*/
 	
 	/**
 	* hint function for when you're forced to colour a node
-	* @param
-	* @return
+	* @param many probably
+	* @return int[3] colour - which colour we suggest that you colour this node
 	*/
 }
