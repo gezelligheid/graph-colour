@@ -42,8 +42,11 @@ public void start(Stage theStage)
             
             /* Section 2 ----------------
             */
-            
-            if (gamemode == 0) {
+            if (gamemode == -1) {
+                /* They just won, display a big nice happy thing
+                */
+            }
+            else if (gamemode == 0) {
                 /* Display the title screen
                 */
             } else if (gamemode == 1 || gamemode == 2 || gamemode == 3) {
@@ -53,7 +56,8 @@ public void start(Stage theStage)
             }
             
             
-            
+            /* Check to see if the game is finished. If so, set their gamemode to 1.
+            */
         }
     }.start();
  
