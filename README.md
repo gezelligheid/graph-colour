@@ -32,12 +32,14 @@ all game modes
 	/**
 	* function to check whether the player has clicked on a vertex
 	* @param int[2] clickPosition - the coordinates of the player's click
+	* @param Vertex[] V - a list of all vertices
 	* @return int index - the index of the vertex that the player clicked, or else -1 if none was
 	*/
 	
 	/**
 	* function to check whether the player has clicked on a colour in the selection box
 	* @param int[2] clickPosition - the coordinates of the player's click
+	* @param some representation of the colour selection box
 	* @return int index - the index of the colour in the selection box that was clicked, or else -1 if none was
 	*/
 	
@@ -45,7 +47,7 @@ all game modes
 	* function to generate random graphs
 	* @param int vertices - number of vertices
 	* @param int edges - number of edges
-	* @return
+	* @return 
 	*/
 	
 }
