@@ -15,7 +15,10 @@ public void start(Stage theStage)
     Image sun   = new Image( "sun.png" );
     Image space = new Image( "space.png" );*/
     
-    /* All initialization code, that runs at the beginning
+    
+    
+    /* Section 1 -------------
+    * All initialization code, that runs at the beginning
     * All event handlers, ie those things that listen to the mouse and keyboard
     */
     
@@ -37,15 +40,19 @@ public void start(Stage theStage)
             gc.drawImage( sun, 196, 196 );*/
             
             
+            /* Section 2 ----------------
+            */
             
             if (gamemode == 0) {
                 /* Display the title screen
                 */
-            } else if (gamemode == 1) {
+            } else if (gamemode == 1 || gamemode == 2 || gamemode == 3) {
                 /* Display the graph
                 * display the colour selection box
                 */
             }
+            
+            
             
         }
     }.start();
