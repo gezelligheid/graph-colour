@@ -50,7 +50,7 @@ all game modes
 	* @return boolean[][] a - an adjacency matrix representing the graph
 	*/
 	
-	[Thomas] Something like this ?
+	// [Thomas] Something like this ?
 	public boolean randomGraph() {
 	System.out.println("Type number of vertices");
 		int vertices = in.nextInt();
