@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+
 
 		class ColEdge
 			{
@@ -163,6 +165,15 @@ public class ReadGraph
 					 //tests finished method
 					 //System.out.println(finished(L,n));
 
+					 //test Degree method
+					 System.out.println(Degree(12, a, a.length));
+					 //test indexOfMax
+					 int[] testArray1 = {1, 0, 7, 7, 4, 2};
+					 int[] testArray2 = {1, 9, 7, 8, 4, 2};
+
+					 System.out.println(indexOfMax(testArray2));
+
+
 		}
 	/**
 	"finished" function, which takes as input
@@ -194,9 +205,9 @@ public class ReadGraph
 		}
 		return M;
 	}
-	public static int Degree(int nodeNum, boolean[][]AdMatrix, int v){
+	public static int Degree(int nodeNum, boolean[][]AdMatrix, int vertices){
       int k=0; // Variable to count the node's neighbours
-      for(int i=0; i<v; i++)// V= number of vertices
+      for(int i=0; i<vertices; i++)// V= number of vertices
 			{
    	 if(AdMatrix[nodeNum][i]==true) k++; // it can be (0,1)
 
@@ -205,8 +216,88 @@ public class ReadGraph
       }
 			return k;
     }
+		//
+		// calculateDegree function, taking as input [Alain]
+		// - int[] L, list of the colours of all vertices
+		// - boolean[][] a, adjacency matrix
+		// The function returns an array the same size and order as L,
+		// which contains the degree of each vertex, ie how many vertices are adjacent to it. Use the Degree() function.
+
+		public static int[] calculateDegree(int[] colourlist, boolean[][] adjMatrix, int vertices){
+			// define array
+			int[] D = new int[colourlist.length];
+			//fill the degree array
+			for (int i=0; i<colourlist.length; i++) {
+				D[i] = Degree(i, adjMatrix, vertices);
+			}
+			//return the (unsorted) array of degrees
+			return D;
+		}
+		// calculateUncolouredDegree [Alain] function, taking as input
+		// - int[] L, list of the colours of all vertices
+		// - boolean[][] a, adjacency matrix
+		// The function returns an array the same size and order as L,
+		// which contains how many uncoloured vertices in L that each uncoloured vertex in L is adjacent to.
+		// coloured verices will get value -1
+		// (I am pretty sure this is the correct interpretation of this line. See section 3.6, page 4 of Alain's paper, and read the first sentence of step 4. Doublecheck me?)
+
+		public static int[] calculateUncolouredDegrees(int[] colourlist, boolean[][] adjMatrix){
+			// define length
+			int uncolouredLength = colourlist.length;
+			// set working value for coloured vertices
+			final int COLOURED = -1;
+			// define uncoloured degree array
+			int[] UD = new int[uncolouredLength];
+			//fill the degree array
+			for (int i=0; i<uncolouredLength; i++) {
+				// set coloured vertices to degree -1
+				if (colourlist[i] != 0) UD[i] = COLOURED;
+				// set uncoloured vertices to the degree of uncoloured adjecencies
+				else UD[i] = toUncolouredDegree(i, adjMatrix, colourlist);
+			}
+			//return the (unsorted) array of degrees
+			return UD;
+		}
+		// adjacency of node to uncoloured nodes
+		public static int toUncolouredDegree(int nodeNum, boolean[][]adMatrix, int[] colourlist){
+			int count = 0;
+			// increase count only if adjecent and the adjecent node is uncoloured
+			for(int i=0; i < adMatrix.length; i++){
+   	 		if(adMatrix[nodeNum][i]==true && colourlist[i] == 0) count++;
+      }
+			return count;
+		}
+
+		// index of max value in array
+		public static int indexOfMax(int[] A){
+				 int maxAt = 0;
+
+				 for (int i = 0; i < A.length; i++) {
+    	 		maxAt = A[i] > A[maxAt] ? i : maxAt;
+					}
+				 return maxAt;
+   		 }
 
 
+		public static int indexOfMaxMultipleArrays(int[] A, int[] B){
+			// variables for max indices of A,B
+			int indexOfMaxA = indexOfMax(A);
+			int indexOfMaxB = indexOfMax(B);
+			// checks if The max in A occurs multiple times
+			for(int i = indexOfMaxA; i <A.length; i++){
+				if (A[indexOfMaxA] == A[i]) {
+					if (A[i] == B[indexOfMaxB]) {
+						// generate a random number to decide which to return
+						double rnum = ThreadLocalRandom.current().nextDouble(0,1);
+						if (rnum > 0.5) return indexOfMaxB;
+						else return indexOfMaxA;
+					}
+					return indexOfMaxB;
+				}
+			}
+			if (A[indexOfMaxA] == B[indexOfMaxB]) return indexOfMaxB;
+			return indexOfMaxA;
+		}
 
 
 
