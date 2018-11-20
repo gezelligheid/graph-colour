@@ -50,6 +50,15 @@ all game modes
 	* @return boolean[][] a - an adjacency matrix representing the graph
 	*/
 	
+	[Thomas] Something like this ?
+	public boolean randomGraph() {
+	System.out.println("Type number of vertices");
+		int vertices = in.nextInt();
+	System.out.println("Type number of edges");
+		int edges = in.nextInt();
+	return boolean[vertices][edges];
+	}
+	
 }
 
 1st two game modes: bitter end, best upper bound
