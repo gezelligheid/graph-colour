@@ -51,7 +51,7 @@ all game modes
 	*/
 	
 	// [Thomas] Something like this ?
-	public boolean randomGraph() {
+	public boolean[][] randomGraph() {
 	System.out.println("Type number of vertices");
 		int vertices = in.nextInt();
 	System.out.println("Type number of edges");
