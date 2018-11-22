@@ -425,12 +425,18 @@ public class ReadGraph
 				for (int i = 0; i < colours2.length; i++) {
 					if (colours2[i] != 0) { chromaticNumber++; }
 				}
+				int[] conflicts = compareResult(a,L2);
 				// Display the last line
 				String line = "";
 				for (int i = 0; i < L2.length; i++) {
 					line += L2[i] + " ";
 				}
+				String line2 = "";
+				for (int i = 0; i < conflicts.length; i++) {
+					line2 += conflicts[i] + " ";
+				}
 				System.out.println("L2[]: " + line);
+				System.out.println("conflicts[]: " + line2);
 			}
 
 
@@ -478,12 +484,24 @@ public class ReadGraph
 		*
 		* @param boolean[][] adMatrix takes the adjecency matrix
 		* @param int[] colourlist the lis of all colours outputted by the algorithm
-		* @return int[] list containing 0 and
+		* @return int[] list containing 0 values for legal nodes and +1,..,n for every
+		* conflict that the node has
 		*/
 	public static int[] compareResult(boolean adMatrix[][], int[] colourlist){
 		// go over each vertex and look for adjacent nodes
+		// the conflict list must be same length as the color list
 		int[] conflicts = new int[colourlist.length];
-		for (int i = 0; i < adMatrix.length; ) {
+		// the adjecency matrix is symmettric so we loop over each row starting at
+		// the index on the right of the pivot
+		for (int i = 0; i < adMatrix.length; i++) {
+			for (int j = i+1; j < adMatrix.length; j++) {
+				// choice made is to look for adjecency first
+				if (adMatrix[i][j] && colourlist[i] == colourlist[j]) {
+					conflicts[i] += 1;
+					conflicts[j] += 1;
+				}
+
+			}
 
 		}
 		// for all nodes that are adjacent compare the colour of the adjacent nodes
