@@ -1,6 +1,6 @@
 /** https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 
-
+This is the pseudocode for the BruteForce algorithm
 
 1. 	Function to generate adjacency matrix(can be taken from phase 1 code)
 
