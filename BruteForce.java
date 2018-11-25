@@ -2,6 +2,14 @@
 
 This is the pseudocode for the BruteForce algorithm
 
+Input:
+1) A 2D array graph[V][V] where V is the number of vertices in graph and graph[V][V] is adjacency matrix representation of the graph. A value graph[i][j] is 1 if there is a direct edge from i to j, otherwise graph[i][j] is 0.
+2) An integer m which is maximum number of colors that can be used.
+
+Output:
+An array color[V] that should have numbers from 1 to m. color[i] should represent the color assigned to the ith vertex. The code should also return false if the graph cannot be colored with m colors
+
+
 1. 	Function to generate adjacency matrix(can be taken from phase 1 code)
 
 2. 	A utility function to check if the current color assignment is safe for vertex v 
