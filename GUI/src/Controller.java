@@ -1,5 +1,6 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 import java.awt.*;
 import java.net.URL;
@@ -7,7 +8,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    public Button button;
+
+    public Button startButton;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("View is now loaded!");
