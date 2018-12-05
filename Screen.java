@@ -11,7 +11,7 @@ public class Screen extends JPanel
   //JButton stopGame= new JButton();
   //JButton buttonStop= new JButton();
   ActionListener listener1 = new MyListener();
-  Timer timer=new Timer(1000,listener1); // 1000 nano seconds( 1 second) delay
+  Timer timer=new Timer(1000,listener1); // 1000 milliseconds( 1 second) delay
   private int time;
   public class MyListener implements ActionListener
   {
