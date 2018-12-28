@@ -111,6 +111,11 @@ public class ChromaticSolve {
 
         //! INSERT YOUR CODE HERE!
 
+        // test calling the adjacnencymatrix creator
+        boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
+
+        // print the matrix to test
+        GenerateRandomGraph.matrix2DPrint(a);
 
     }
 

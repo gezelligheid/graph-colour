@@ -117,6 +117,8 @@ public class ReadGraph {
         // Pseudocode
 
         int l = e.length - 1;
+        System.out.println("variable l is:" + l);
+        System.out.println("variable m is:" + m);
 		/*int nodes = 0;
 		{
 			int maxU = 0;
