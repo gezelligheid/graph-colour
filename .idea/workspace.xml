@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GraphGeneration/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/ReadGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReadGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +25,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReadGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="506" column="21" lean-forward="true" selection-start-line="506" selection-start-column="21" selection-end-line="506" selection-end-column="21" />
+            <state relative-caret-position="272">
+              <caret line="16" column="30" lean-forward="true" selection-end-line="839" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ColEdge.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="12" />
+              <folding>
+                <element signature="e#0#169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,14 +64,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="2076" />
-    <option name="height" value="2112" />
+    <option name="width" value="1943" />
+    <option name="height" value="1103" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -73,7 +85,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,16 +137,18 @@
       <workItem from="1543410287770" duration="55000" />
       <workItem from="1543410376000" duration="215000" />
       <workItem from="1543410645493" duration="4097000" />
+      <workItem from="1544712987824" duration="374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4367000" />
+    <option name="totallyTimeSpent" value="4741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1384" height="1408" extended-state="0" />
+    <frame x="0" y="0" width="1554" height="882" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26104417" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -143,7 +156,6 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.26253918" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.14576803" />
@@ -157,7 +169,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -168,6 +180,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="TMC Project List" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32930514" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,10 +190,20 @@
     <entry file="file://$PROJECT_DIR$/ReadGraph.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ColEdge.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" />
+          <folding>
+            <element signature="e#0#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="506" column="21" lean-forward="true" selection-start-line="506" selection-start-column="21" selection-end-line="506" selection-end-column="21" />
+        <state relative-caret-position="272">
+          <caret line="16" column="30" lean-forward="true" selection-end-line="839" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
