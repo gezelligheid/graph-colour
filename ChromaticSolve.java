@@ -1,8 +1,12 @@
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
+
 class ColEdge {
     int u;
     int v;
 }
-
 
 
 public class ChromaticSolve {
@@ -114,9 +118,9 @@ public class ChromaticSolve {
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
         // testing single vertex saturation method
-        int[] fakeColorlist = {1, 1, 1, 0, 5, 6};
+        int[] fakeColorlist = {1, 2, 3, 1, 5, 6};
         // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
-        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a,fakeColorlist);
+        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
         // System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 
         // testing the indexofmax method
@@ -124,9 +128,16 @@ public class ChromaticSolve {
         //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
 
         // testing the indices with same value method
-        ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist,0);
-        System.out.println(testlist);
+        //ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist, 0);
+        //System.out.println(testlist);
 
+        // testing adjacent colors list
+        ArrayList<Integer> adjColorTest = ChromaticMethods.vertexAdjacentColorsSet(a, fakeColorlist, 0);
+        System.out.println(adjColorTest);
+
+        // testing color assignment
+        int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);
+        System.out.println("the chosen color is: " + chosenColor);
         // testing the degree set making
         // int[] degSet = ChromaticMethods.makeDegreeSet(a);
         // System.out.println(Arrays.toString(degSet));

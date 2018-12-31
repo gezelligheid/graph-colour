@@ -2,6 +2,12 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
+
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
+
 public class ChromaticMethods {
 
     /**
@@ -106,7 +112,7 @@ public class ChromaticMethods {
      * distinguish between unsaturated (0) and colored vertices (-1)
      *
      * @param adjacencyMatrix graph
-     * @param colorList current list of colorings
+     * @param colorList       current list of colorings
      * @return list with contents as described
      */
     public static int[] uncoloredSaturations(boolean[][] adjacencyMatrix, int[] colorList) {
@@ -124,8 +130,8 @@ public class ChromaticMethods {
      *
      * @param array
      * @return the index number of the maximum value
-     * */
-    public static int indexOfMax ( int[] array){
+     */
+    public static int indexOfMax(int[] array) {
         int maxAt = 0; // default index
 
         for (int i = 0; i < array.length; i++) {
@@ -133,15 +139,16 @@ public class ChromaticMethods {
         }
         return maxAt;
     }
+
     /**
      * gives the indices of elements with the same value that have a higher index than the target element
      * usefull for checking of a maximum value is unique or not
      *
-     * @param array specified
+     * @param array        specified
      * @param elementIndex the element that should be checked
      * @return arraylist with indices(e.g. vertex indices)
-     * */
-    public static ArrayList<Integer> elementsSameValue(int[] array, int elementIndex){
+     */
+    public static ArrayList<Integer> elementsSameValue(int[] array, int elementIndex) {
         ArrayList<Integer> theSame = new ArrayList<>(); // initiate an empty arraylist
 
         for (int i = elementIndex; i < array.length; i++) { // only elements with a higher index are considered
@@ -149,15 +156,28 @@ public class ChromaticMethods {
         }
         return theSame;
     }
-    public static boolean colorPossible
 
-    public static int assignColorDSATUR(boolean[][] adjacencyMatrix int[] colorList, int vertex){
+    public static ArrayList<Integer> vertexAdjacentColorsSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
+        ArrayList<Integer> adjColors = new ArrayList<>(); // will contain adjacent color numbers
+        for (int i = 0; i < colorList.length; i++) {
+            if (adjacencyMatrix[vertex][i] && colorList[i] > 0 && !(adjColors.contains(colorList[i])))
+                adjColors.add(colorList[i]);
+        }
+        return adjColors;
+    }
+
+    public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         int activeColor = 1; // default color
-        int setColors = colorList[indexOfMax(colorList)]; // number of colors in use
-        // Firstly, the selected vertex is tried to color with the colors
-        // in the color set
-        for (int i = 0; i < ; i++) {
-            if (adjacencyMatrix[vertex][i])
+        int maxColor = colorList[indexOfMax(colorList)]; // number of colors in use
+        ArrayList<Integer> adjSet = vertexAdjacentColorsSet(adjacencyMatrix, colorList, vertex);
+        // new color is needed when all current colors are adjacent
+        if (adjSet.size() == maxColor) return maxColor + 1;
+        // otherwise we assign the first color that fits
+        for (int i = 1; i <= maxColor; i++) {
+            if (!adjSet.contains(i)) {
+                activeColor = i;
+                break;
+            }
         }
 
 
