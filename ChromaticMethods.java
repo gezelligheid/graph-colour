@@ -2,11 +2,6 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.lang.Math;
-
 public class ChromaticMethods {
 
     /**
@@ -154,9 +149,18 @@ public class ChromaticMethods {
         }
         return theSame;
     }
+    public static boolean colorPossible
 
-    public static int assignColorDSATUR(){
-        //To be implemented
-        return -1;
+    public static int assignColorDSATUR(boolean[][] adjacencyMatrix int[] colorList, int vertex){
+        int activeColor = 1; // default color
+        int setColors = colorList[indexOfMax(colorList)]; // number of colors in use
+        // Firstly, the selected vertex is tried to color with the colors
+        // in the color set
+        for (int i = 0; i < ; i++) {
+            if (adjacencyMatrix[vertex][i])
+        }
+
+
+        return activeColor; // the color number assigned to the vertex
     }
 }

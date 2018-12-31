@@ -1,8 +1,3 @@
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.lang.Math;
-
 class ColEdge {
     int u;
     int v;
