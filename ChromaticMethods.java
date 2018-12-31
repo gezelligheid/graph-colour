@@ -30,16 +30,50 @@ public class ChromaticMethods {
         }
         return a;
     }
+
     /**
      * provides a graph coloring based on the degree of saturation algorithm
      *
      * @param adjacencyMatrix
      * @return the the list with a coloring that can be seen as an upper bound
-     * */
-    public static int[] colorDSATUR(boolean[][] adjacencyMatrix){
+     */
+    public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
 
+        //INSERT CODE
         return cL;
     }
 
+    /**
+     * get degree of single vertex
+     *
+     * @param adjacencyMatrix the matrix it is about
+     * @param vertexIndex     the vertex index 0 to n
+     */
+    public static int singleVertexDegree(boolean[][] adjacencyMatrix, int vertexIndex) {
+        int k = 0; // Variable to count the node's neighbours
+
+        for (int i = 0; i < adjacencyMatrix.length; i++)// V = number of vertices
+        {
+            if (adjacencyMatrix[vertexIndex][i])// it can be (0,1)
+                k++;
+        }
+        return k;
+    }
+
+    /**
+     * generates array where index number represents a vertex, and the value its degree
+     *
+     * @param adjacencyMatrix
+     * @return array as described*/
+    public static int[] makeDegreeSet(boolean[][] adjacencyMatrix) {
+        // define array
+        int[] D = new int[adjacencyMatrix.length];
+        // fill the degree array with vertex index with the value as it's degree
+        for (int i = 0; i < adjacencyMatrix.length; i++) {
+            D[i] = singleVertexDegree(adjacencyMatrix, i);
+        }
+        //return the (unsorted) array of degrees
+        return D;
+    }
 }

@@ -1,3 +1,8 @@
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
+
 class ColEdge {
     int u;
     int v;
@@ -108,11 +113,16 @@ public class ChromaticSolve {
 
         //! INSERT YOUR CODE HERE!
 
-        // test calling the adjacnencymatrix creator
+        // test calling the adjacencymatrix creator
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
+        // testing the degree set making
+        int[] degSet = ChromaticMethods.makeDegreeSet(a);
+        System.out.println(Arrays.toString(degSet));
+
+
         // print the matrix to test
-        GenerateRandomGraph.matrix2DPrint(a);
+        //GenerateRandomGraph.matrix2DPrint(a);
 
     }
 
