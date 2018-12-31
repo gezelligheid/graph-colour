@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ColEdge.class" beforeDir="false" afterPath="$PROJECT_DIR$/ColEdge.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="124" column="10" selection-start-line="124" selection-start-column="10" selection-end-line="124" selection-end-column="10" />
+            <state relative-caret-position="794">
+              <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,11 +37,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="459">
+              <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +74,8 @@
       <list>
         <option value="$PROJECT_DIR$/ReadGraph.java" />
         <option value="$PROJECT_DIR$/graphToAdjacency.java" />
-        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
         <option value="$PROJECT_DIR$/ChromaticMethods.java" />
+        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
       </list>
     </option>
   </component>
@@ -105,13 +108,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546255364905" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546259598241" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,7 +156,7 @@
       <workItem from="1543410376000" duration="215000" />
       <workItem from="1543410645493" duration="4097000" />
       <workItem from="1544712987824" duration="374000" />
-      <workItem from="1545989731011" duration="14547000" />
+      <workItem from="1545989731011" duration="18307000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -162,14 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546251798152</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="degree list method completed and tested to work">
+      <created>1546255872426</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546255872426</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19288000" />
+    <option name="totallyTimeSpent" value="23048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12751678" />
@@ -212,7 +222,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="skelleton with intention for DSATUR algorithm set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="skelleton with intention for DSATUR algorithm set up" />
+    <MESSAGE value="degree list method completed and tested to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="degree list method completed and tested to work" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -269,20 +280,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="124" column="10" selection-start-line="124" selection-start-column="10" selection-end-line="124" selection-end-column="10" />
+        <state relative-caret-position="459">
+          <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="794">
+          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,6 +8,8 @@ class ColEdge {
     int v;
 }
 
+
+
 public class ChromaticSolve {
 
     public final static boolean DEBUG = true;
@@ -116,9 +118,13 @@ public class ChromaticSolve {
         // test calling the adjacencymatrix creator
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
+        // testing single vertex saturation method
+        int[] fakeColorlist = {1, 1, 1, 1, 5, 6};
+        System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
+
         // testing the degree set making
-        int[] degSet = ChromaticMethods.makeDegreeSet(a);
-        System.out.println(Arrays.toString(degSet));
+        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
+        // System.out.println(Arrays.toString(degSet));
 
 
         // print the matrix to test

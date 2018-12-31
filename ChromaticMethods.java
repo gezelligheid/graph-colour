@@ -2,6 +2,11 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
+
 public class ChromaticMethods {
 
     /**
@@ -75,5 +80,18 @@ public class ChromaticMethods {
         }
         //return the (unsorted) array of degrees
         return D;
+    }
+    public static int singleVertexSaturation(boolean[][] adjacencyMatrix, int[] colorList, int vertexIndex){
+        ArrayList<Integer> colors = new ArrayList<>(); // will contain unique color set of adjacent colored vertices
+
+        for (int i = 0; i < adjacencyMatrix.length; i++)// V = number of vertices
+        {
+            // must check for adjacency first
+            // then see if the vertex is colored i.e. color != 0
+            // finally this color must be different from the ones seen before in order to count
+            if (adjacencyMatrix[vertexIndex][i] && colorList[i] != 0 && !colors.contains(colorList[i]))// it can be (0,1)
+                colors.add(colorList[i]); // color is added to the list
+        }
+        return colors.size();
     }
 }
