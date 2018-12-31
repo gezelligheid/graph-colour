@@ -1,12 +1,11 @@
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.lang.Math;
 /**
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
-
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
 public class ChromaticMethods {
 
     /**
@@ -107,15 +106,35 @@ public class ChromaticMethods {
     }
 
     /**
-     * uses singleVertexSaturation to create a list with -1's if a vertex is colored
+     * uses singleVertexSaturation to create a list with -1's if a vertex is colored in order to
+     * distinguish between unsaturated (0) and colored vertices (-1)
+     *
+     * @param adjacencyMatrix graph
+     * @param colorList current list of colorings
+     * @return list with contents as described
      */
     public static int[] uncoloredSaturations(boolean[][] adjacencyMatrix, int[] colorList) {
         int[] uS = new int[colorList.length]; // create uncolored saturation array
         Arrays.fill(uS, -1); // -1 in order to destinguish between uncolored and unsaturated
         // loop over all vertices
-        for (int i = 0; i < uS.length; i++) { // uncolored vertices are considered
+        for (int i = 0; i < uS.length; i++) { // only uncolored vertices are considered
             if (colorList[i] == 0) uS[i] = singleVertexSaturation(adjacencyMatrix, colorList, i);
         }
         return uS;
+    }
+
+    /**
+     * index of maximum value of given integer array
+     *
+     * @param Array
+     * @return the index number of the maximum value
+     * */
+    public static int indexOfMax ( int[] Array){
+        int maxAt = 0; // default index
+
+        for (int i = 0; i < Array.length; i++) {
+            maxAt = (Array[i] > Array[maxAt]) ? i : maxAt;
+        }
+        return maxAt;
     }
 }

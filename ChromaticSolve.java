@@ -69,7 +69,7 @@ public class ChromaticSolve {
             for (int d = 0; d < m; d++) {
                 if (DEBUG) System.out.println(COMMENT + " Reading edge " + (d + 1));
                 record = br.readLine();
-                String data[] = record.split(" ");
+                String[] data = record.split(" ");
                 if (data.length != 2) {
                     System.out.println("Error! Malformed edge line: " + record);
                     System.exit(0);
@@ -99,7 +99,7 @@ public class ChromaticSolve {
         }
 
         for (int x = 1; x <= n; x++) {
-            if (seen[x] == false) {
+            if (!seen[x]) {
                 if (DEBUG)
                     System.out.println(COMMENT + " Warning: vertex " + x + " didn't appear in any edge : it will be considered a disconnected vertex on its own.");
             }
@@ -119,9 +119,13 @@ public class ChromaticSolve {
 
         // testing single vertex saturation method
         int[] fakeColorlist = {1, 1, 1, 0, 5, 6};
-        System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
+        // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
         int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a,fakeColorlist);
-        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
+        // System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
+
+        // testing the indexofmax method
+        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
+        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
 
         // testing the degree set making
         // int[] degSet = ChromaticMethods.makeDegreeSet(a);

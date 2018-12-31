@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
+    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="tested method to create list of vertex saturation working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ColEdge.class" beforeDir="false" afterPath="$PROJECT_DIR$/ColEdge.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+            <state relative-caret-position="386">
+              <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,12 +37,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -74,8 +74,8 @@
       <list>
         <option value="$PROJECT_DIR$/ReadGraph.java" />
         <option value="$PROJECT_DIR$/graphToAdjacency.java" />
-        <option value="$PROJECT_DIR$/ChromaticMethods.java" />
         <option value="$PROJECT_DIR$/ChromaticSolve.java" />
+        <option value="$PROJECT_DIR$/ChromaticMethods.java" />
       </list>
     </option>
   </component>
@@ -108,7 +108,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546268269020" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546270188385" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -156,7 +156,7 @@
       <workItem from="1543410376000" duration="215000" />
       <workItem from="1543410645493" duration="4097000" />
       <workItem from="1544712987824" duration="374000" />
-      <workItem from="1545989731011" duration="21571000" />
+      <workItem from="1545989731011" duration="23977000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -186,11 +186,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546264198740</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tested method to create list of vertex saturation working">
+      <created>1546268520772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546268520772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26312000" />
+    <option name="totallyTimeSpent" value="28718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -239,7 +246,8 @@
     <MESSAGE value="degree list method completed and tested to work" />
     <MESSAGE value="completed and tested singleVertexSaturation method" />
     <MESSAGE value="completed method to create list of vertex saturation" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed method to create list of vertex saturation" />
+    <MESSAGE value="tested method to create list of vertex saturation working" />
+    <option name="LAST_COMMIT_MESSAGE" value="tested method to create list of vertex saturation working" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -296,21 +304,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="386">
+          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+        <state relative-caret-position="420">
+          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
