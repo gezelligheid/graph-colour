@@ -30,5 +30,16 @@ public class ChromaticMethods {
         }
         return a;
     }
+    /**
+     * provides a graph coloring based on the degree of saturation algorithm
+     *
+     * @param adjacencyMatrix
+     * @return the the list with a coloring that can be seen as an upper bound
+     * */
+    public static int[] colorDSATUR(boolean[][] adjacencyMatrix){
+        int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
+
+        return cL;
+    }
 
 }

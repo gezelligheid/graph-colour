@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.*;
-
 class ColEdge {
     int u;
     int v;
