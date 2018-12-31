@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.Math;
+
 public class ChromaticMethods {
 
     /**
@@ -115,7 +116,7 @@ public class ChromaticMethods {
      */
     public static int[] uncoloredSaturations(boolean[][] adjacencyMatrix, int[] colorList) {
         int[] uS = new int[colorList.length]; // create uncolored saturation array
-        Arrays.fill(uS, -1); // -1 in order to destinguish between uncolored and unsaturated
+        Arrays.fill(uS, -1); // -1 in order to distinguish between uncolored and unsaturated
         // loop over all vertices
         for (int i = 0; i < uS.length; i++) { // only uncolored vertices are considered
             if (colorList[i] == 0) uS[i] = singleVertexSaturation(adjacencyMatrix, colorList, i);
@@ -126,15 +127,36 @@ public class ChromaticMethods {
     /**
      * index of maximum value of given integer array
      *
-     * @param Array
+     * @param array
      * @return the index number of the maximum value
      * */
-    public static int indexOfMax ( int[] Array){
+    public static int indexOfMax ( int[] array){
         int maxAt = 0; // default index
 
-        for (int i = 0; i < Array.length; i++) {
-            maxAt = (Array[i] > Array[maxAt]) ? i : maxAt;
+        for (int i = 0; i < array.length; i++) {
+            maxAt = (array[i] > array[maxAt]) ? i : maxAt;
         }
         return maxAt;
+    }
+    /**
+     * gives the indices of elements with the same value that have a higher index than the target element
+     * usefull for checking of a maximum value is unique or not
+     *
+     * @param array specified
+     * @param elementIndex the element that should be checked
+     * @return arraylist with indices(e.g. vertex indices)
+     * */
+    public static ArrayList<Integer> elementsSameValue(int[] array, int elementIndex){
+        ArrayList<Integer> theSame = new ArrayList<>(); // initiate an empty arraylist
+
+        for (int i = elementIndex; i < array.length; i++) { // only elements with a higher index are considered
+            if (array[elementIndex] == array[i]) theSame.add(i);
+        }
+        return theSame;
+    }
+
+    public static int assignColorDSATUR(){
+        //To be implemented
+        return -1;
     }
 }

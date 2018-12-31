@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.Math;
+
 class ColEdge {
     int u;
     int v;
@@ -126,6 +127,10 @@ public class ChromaticSolve {
         // testing the indexofmax method
         //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
         //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
+
+        // testing the indices with same value method
+        ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist,0);
+        System.out.println(testlist);
 
         // testing the degree set making
         // int[] degSet = ChromaticMethods.makeDegreeSet(a);
