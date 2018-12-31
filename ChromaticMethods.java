@@ -2,6 +2,7 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -60,7 +61,7 @@ public class ChromaticMethods {
 
         for (int i = 0; i < adjacencyMatrix.length; i++)// V = number of vertices
         {
-            if (adjacencyMatrix[vertexIndex][i])// it can be (0,1)
+            if (adjacencyMatrix[vertexIndex][i])
                 k++;
         }
         return k;
@@ -70,7 +71,8 @@ public class ChromaticMethods {
      * generates array where index number represents a vertex, and the value its degree
      *
      * @param adjacencyMatrix
-     * @return array as described*/
+     * @return array as described
+     */
     public static int[] makeDegreeSet(boolean[][] adjacencyMatrix) {
         // define array
         int[] D = new int[adjacencyMatrix.length];
@@ -81,7 +83,17 @@ public class ChromaticMethods {
         //return the (unsorted) array of degrees
         return D;
     }
-    public static int singleVertexSaturation(boolean[][] adjacencyMatrix, int[] colorList, int vertexIndex){
+
+    /**
+     * calculate the number of different colors among the colored vertices adjecent to a specified vertex
+     * example: if a vertex is adjacent to 4 vertices with colors [1, (no color), 1, 2] then the saturation is 2.
+     *
+     * @param adjacencyMatrix the graph
+     * @param colorList       the list containing current coloring
+     * @param vertexIndex     desired vertex
+     * @return degree of saturation
+     */
+    public static int singleVertexSaturation(boolean[][] adjacencyMatrix, int[] colorList, int vertexIndex) {
         ArrayList<Integer> colors = new ArrayList<>(); // will contain unique color set of adjacent colored vertices
 
         for (int i = 0; i < adjacencyMatrix.length; i++)// V = number of vertices
@@ -89,9 +101,22 @@ public class ChromaticMethods {
             // must check for adjacency first
             // then see if the vertex is colored i.e. color != 0
             // finally this color must be different from the ones seen before in order to count
-            if (adjacencyMatrix[vertexIndex][i] && colorList[i] != 0 && !colors.contains(colorList[i]))// it can be (0,1)
+            if (adjacencyMatrix[vertexIndex][i] && colorList[i] != 0 && !colors.contains(colorList[i]))
                 colors.add(colorList[i]); // color is added to the list
         }
         return colors.size();
+    }
+
+    /**
+     * uses singleVertexSaturation to create a list with -1's if a vertex is colored
+     */
+    public static int[] uncoloredSaturations(boolean[][] adjacencyMatrix, int[] colorList) {
+        int[] uS = new int[colorList.length]; // create uncolored saturation array
+        Arrays.fill(uS, -1); // -1 in order to destinguish between uncolored and unsaturated
+        // loop over all vertices
+        for (int i = 0; i < uS.length; i++) { // uncolored vertices are considered
+            if (colorList[i] == 0) uS[i] = singleVertexSaturation(adjacencyMatrix, colorList, i);
+        }
+        return uS;
     }
 }
