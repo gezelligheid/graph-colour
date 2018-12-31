@@ -1,12 +1,11 @@
-/**
- * class that contains ingredients for calculating the chromatic number of
- * undirected graphs
- */
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.Math;
+/**
+ * class that contains ingredients for calculating the chromatic number of
+ * undirected graphs
+ */
 
 public class ChromaticMethods {
 

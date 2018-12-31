@@ -1,3 +1,7 @@
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.lang.Math;
 class ColEdge {
     int u;
     int v;
@@ -114,8 +118,10 @@ public class ChromaticSolve {
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
         // testing single vertex saturation method
-        int[] fakeColorlist = {1, 1, 1, 1, 5, 6};
+        int[] fakeColorlist = {1, 1, 1, 0, 5, 6};
         System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
+        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a,fakeColorlist);
+        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 
         // testing the degree set making
         // int[] degSet = ChromaticMethods.makeDegreeSet(a);
