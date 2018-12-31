@@ -2,7 +2,6 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -45,9 +44,19 @@ public class ChromaticMethods {
      */
     public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
+        int[] degs = makeDegreeSet(adjacencyMatrix);
 
-        //INSERT CODE
+        while (containsZero(cL)){
+
+        }
         return cL;
+    }
+
+    public static boolean containsZero(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) return true;
+        }
+        return false;
     }
 
     /**
