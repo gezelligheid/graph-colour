@@ -15,7 +15,7 @@ public class ChromaticSolve {
 
     public final static String COMMENT = "//";
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         if (args.length < 1) {
             System.out.println("Error! No filename specified.");
             System.exit(0);
@@ -118,11 +118,13 @@ public class ChromaticSolve {
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
         // testing single vertex saturation method
-        int[] fakeColorlist = {1, 2, 3, 1, 5, 6};
+        int[] fakeColorlist = {0, 2, 3, 0, 5, 6};
         // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
         int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
-        // System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
+        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 
+        int[] degs = ChromaticMethods.makeDegreeSet(a);
+        System.out.println("deg list: " + Arrays.toString(degs));
         // testing the indexofmax method
         //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
         //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
@@ -134,6 +136,10 @@ public class ChromaticSolve {
         // testing adjacent colors list
         ArrayList<Integer> adjColorTest = ChromaticMethods.vertexAdjacentColorsSet(a, fakeColorlist, 0);
         System.out.println(adjColorTest);
+
+        // testing vertex selection
+        int vC = ChromaticMethods.selectVertexDSATUR(fakeSaturationlist, degs);
+        System.out.println("the chosen color is: " + vC);
 
         // testing color assignment
         int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);

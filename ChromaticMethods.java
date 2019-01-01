@@ -2,10 +2,9 @@
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
  */
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.lang.Math;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ChromaticMethods {
 
@@ -44,15 +43,17 @@ public class ChromaticMethods {
      */
     public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
-        int[] degs = makeDegreeSet(adjacencyMatrix);
+        int[] degs = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
+        cL[indexOfMax(degs)] = 1; // highest degree vertex get first color
 
-        while (containsZero(cL)){
+        while (containsZero(cL)) {
+            int[] uVS = uncoloredSaturations(adjacencyMatrix, cL); // set containing saturation levels of uncolored v
 
         }
         return cL;
     }
 
-    public static boolean containsZero(int[] array){
+    public static boolean containsZero(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) return true;
         }
@@ -166,6 +167,14 @@ public class ChromaticMethods {
         return theSame;
     }
 
+    /**
+     * creates a set of all unique colors adjacent to a given vertex
+     *
+     * @param adjacencyMatrix graph
+     * @param colorList       current coloring
+     * @param vertex          specified
+     * @return arraylist as desscribed
+     */
     public static ArrayList<Integer> vertexAdjacentColorsSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         ArrayList<Integer> adjColors = new ArrayList<>(); // will contain adjacent color numbers
         for (int i = 0; i < colorList.length; i++) {
@@ -173,6 +182,31 @@ public class ChromaticMethods {
                 adjColors.add(colorList[i]);
         }
         return adjColors;
+    }
+
+    /**
+     * highest saturation vertex is selected.
+     * if there are multiple higest, then the highest degree among them gets selected
+     * if the degrees are also equal, the vertex that was first in the list will just be selected.
+     *
+     * @param saturationList created based on current coloring
+     * @param degreeList created at beginning of the program
+     * @return the index of the vertex to be colored
+     */
+    public static int selectVertexDSATUR(int[] saturationList, int[] degreeList) {
+        // the uncolored vertices with the largest number of adjacent colors are candidates for coloring
+        ArrayList<Integer> candidates = elementsSameValue(saturationList, indexOfMax(saturationList));
+        // if this set has only one element then this vertex will be colored
+        if (candidates.size() == 1)
+            return candidates.get(0);
+        // otherwise the highest degree vertex is selected
+        int vChoice = candidates.get(0);
+        for (Integer i : candidates) {
+            if (degreeList[candidates.get(i)] > degreeList[vChoice])
+                vChoice = candidates.get(i); // the highest degree vertex is selected
+        }
+        return vChoice;
+
     }
 
     public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
@@ -188,8 +222,6 @@ public class ChromaticMethods {
                 break;
             }
         }
-
-
         return activeColor; // the color number assigned to the vertex
     }
 }
