@@ -124,6 +124,7 @@ public class ChromaticSolve {
         System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 
         int[] degs = ChromaticMethods.makeDegreeSet(a);
+        degs[3] = 4;
         System.out.println("deg list: " + Arrays.toString(degs));
         // testing the indexofmax method
         //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
@@ -139,7 +140,7 @@ public class ChromaticSolve {
 
         // testing vertex selection
         int vC = ChromaticMethods.selectVertexDSATUR(fakeSaturationlist, degs);
-        System.out.println("the chosen color is: " + vC);
+        System.out.println("the vertex to color is: " + vC);
 
         // testing color assignment
         int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);
@@ -148,6 +149,10 @@ public class ChromaticSolve {
         // int[] degSet = ChromaticMethods.makeDegreeSet(a);
         // System.out.println(Arrays.toString(degSet));
 
+        System.out.println("--");
+        // testing the dsatur algo
+        int[] coloring = ChromaticMethods.colorDSATUR(a);
+        System.out.println(Arrays.toString(coloring));
 
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(a);

@@ -48,7 +48,8 @@ public class ChromaticMethods {
 
         while (containsZero(cL)) {
             int[] uVS = uncoloredSaturations(adjacencyMatrix, cL); // set containing saturation levels of uncolored v
-
+            int vChoice = selectVertexDSATUR(uVS, degs);
+            cL[vChoice] = assignColorDSATUR(adjacencyMatrix, cL, vChoice);
         }
         return cL;
     }
@@ -201,7 +202,7 @@ public class ChromaticMethods {
             return candidates.get(0);
         // otherwise the highest degree vertex is selected
         int vChoice = candidates.get(0);
-        for (Integer i : candidates) {
+        for (int i = 0; i < candidates.size(); i++) {
             if (degreeList[candidates.get(i)] > degreeList[vChoice])
                 vChoice = candidates.get(i); // the highest degree vertex is selected
         }
