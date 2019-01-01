@@ -54,9 +54,14 @@ public class ChromaticMethods {
         return cL;
     }
 
+    /**
+     * true if integer array contains a zero
+     *
+     * @param array
+     * @return whether contains a zero value*/
     public static boolean containsZero(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 0) return true;
+        for (int i1 : array) {
+            if (i1 == 0) return true;
         }
         return false;
     }
@@ -213,6 +218,16 @@ public class ChromaticMethods {
 
     }
 
+    /**
+     * The color assigning for a given vertex happens by first creating a set containing all unique colors(numbers)
+     * that are used by its adjacent vertices.
+     * if the size of that list is equal to the highest known color it follows directly that a new color is assigned.
+     * otherwise, we just pick the first/lowest number that it is not in the set.
+     *
+     * @param adjacencyMatrix the graph
+     * @param colorList current coloring
+     * @param vertex to color
+     * */
     public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         int activeColor = 1; // default color
         int maxColor = colorList[indexOfMax(colorList)]; // number of colors in use
@@ -228,6 +243,14 @@ public class ChromaticMethods {
         }
         return activeColor; // the color number assigned to the vertex
     }
+    /**
+     * verifies that no colors are conflicting by iterationg over the adjacency matrix
+     * on one side of the diagonal
+     * creates a list of conflicts that has the conflicting elements
+     *
+     * @param adjacencyMatrix the graph
+     * @param colorlist the coloring to be tested
+     * */
     public static void showConflicts(boolean[][] adjacencyMatrix, int[] colorlist){
         ArrayList<String> conflicts = new ArrayList<>();
         for (int i = 0; i < colorlist.length; i++) {
