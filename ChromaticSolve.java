@@ -117,46 +117,47 @@ public class ChromaticSolve {
         // test calling the adjacencymatrix creator
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
-        // testing single vertex saturation method
-        int[] fakeColorlist = {0, 2, 3, 0, 5, 6};
-        // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
-        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
-        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
-
-        int[] degs = ChromaticMethods.makeDegreeSet(a);
-        degs[3] = 4;
-        System.out.println("deg list: " + Arrays.toString(degs));
-        // testing the indexofmax method
-        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
-        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
-
-        // testing the indices with same value method
-        //ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist, 0);
-        //System.out.println(testlist);
-
-        // testing adjacent colors list
-        ArrayList<Integer> adjColorTest = ChromaticMethods.vertexAdjacentColorsSet(a, fakeColorlist, 0);
-        System.out.println(adjColorTest);
-
-        // testing vertex selection
-        int vC = ChromaticMethods.selectVertexDSATUR(fakeSaturationlist, degs);
-        System.out.println("the vertex to color is: " + vC);
-
-        // testing color assignment
-        int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);
-        System.out.println("the chosen color is: " + chosenColor);
-        // testing the degree set making
-        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
-        // System.out.println(Arrays.toString(degSet));
 
         System.out.println("--");
         // testing the dsatur algo
         int[] coloring = ChromaticMethods.colorDSATUR(a);
         System.out.println(Arrays.toString(coloring));
+        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
 
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(a);
 
+//        // testing single vertex saturation method
+//        int[] fakeColorlist = {0, 2, 3, 0, 5, 6};
+//        // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
+//        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
+//        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
+//
+//        int[] degs = ChromaticMethods.makeDegreeSet(a);
+//        degs[3] = 4;
+//        System.out.println("deg list: " + Arrays.toString(degs));
+//        // testing the indexofmax method
+//        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
+//        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
+//
+//        // testing the indices with same value method
+//        //ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist, 0);
+//        //System.out.println(testlist);
+//
+//        // testing adjacent colors list
+//        ArrayList<Integer> adjColorTest = ChromaticMethods.vertexAdjacentColorsSet(a, fakeColorlist, 0);
+//        System.out.println(adjColorTest);
+//
+//        // testing vertex selection
+//        int vC = ChromaticMethods.selectVertexDSATUR(fakeSaturationlist, degs);
+//        System.out.println("the vertex to color is: " + vC);
+//
+//        // testing color assignment
+//        int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);
+//        System.out.println("the chosen color is: " + chosenColor);
+//        // testing the degree set making
+//        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
+//        // System.out.println(Arrays.toString(degSet));
     }
 
 }

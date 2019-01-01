@@ -96,7 +96,7 @@ public class ChromaticMethods {
     }
 
     /**
-     * calculate the number of different colors among the colored vertices adjecent to a specified vertex
+     * calculate the number of different colors among the colored vertices adjacent to a specified vertex
      * example: if a vertex is adjacent to 4 vertices with colors [1, (no color), 1, 2] then the saturation is 2.
      *
      * @param adjacencyMatrix the graph
@@ -107,13 +107,16 @@ public class ChromaticMethods {
     public static int singleVertexSaturation(boolean[][] adjacencyMatrix, int[] colorList, int vertexIndex) {
         ArrayList<Integer> colors = new ArrayList<>(); // will contain unique color set of adjacent colored vertices
 
-        for (int i = 0; i < adjacencyMatrix.length; i++)// V = number of vertices
+        for (int i = 0; i < colorList.length; i++)// V = number of vertices
         {
             // must check for adjacency first
             // then see if the vertex is colored i.e. color != 0
             // finally this color must be different from the ones seen before in order to count
-            if (adjacencyMatrix[vertexIndex][i] && colorList[i] != 0 && !colors.contains(colorList[i]))
-                colors.add(colorList[i]); // color is added to the list
+            if (adjacencyMatrix[vertexIndex][i])
+                if (colorList[i] != 0)
+                    if (!colors.contains(colorList[i])) {
+                        colors.add(colorList[i]); // color is added to the list
+                    }
         }
         return colors.size();
     }
@@ -191,7 +194,7 @@ public class ChromaticMethods {
      * if the degrees are also equal, the vertex that was first in the list will just be selected.
      *
      * @param saturationList created based on current coloring
-     * @param degreeList created at beginning of the program
+     * @param degreeList     created at beginning of the program
      * @return the index of the vertex to be colored
      */
     public static int selectVertexDSATUR(int[] saturationList, int[] degreeList) {
