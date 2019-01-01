@@ -228,4 +228,15 @@ public class ChromaticMethods {
         }
         return activeColor; // the color number assigned to the vertex
     }
+    public static void showConflicts(boolean[][] adjacencyMatrix, int[] colorlist){
+        ArrayList<String> conflicts = new ArrayList<>();
+        for (int i = 0; i < colorlist.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (adjacencyMatrix[i][j] && colorlist[i] == colorlist[j]){
+                    conflicts.add( j + "and " + i +", ");
+                }
+            }
+        }
+        System.out.println("conflicting vertices: " + conflicts);
+    }
 }

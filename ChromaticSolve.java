@@ -11,7 +11,7 @@ class ColEdge {
 
 public class ChromaticSolve {
 
-    public final static boolean DEBUG = true;
+    public final static boolean DEBUG = false;
 
     public final static String COMMENT = "//";
 
@@ -123,7 +123,7 @@ public class ChromaticSolve {
         int[] coloring = ChromaticMethods.colorDSATUR(a);
         System.out.println(Arrays.toString(coloring));
         System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-
+        ChromaticMethods.showConflicts(a,coloring);
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(a);
 
