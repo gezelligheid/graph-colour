@@ -59,6 +59,7 @@ public class ChromaticMethods {
         int[] degs = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
         cL[indexOfMax(degs)] = 1; // highest degree vertex get first color
 
+        // to be implemented
 
 
         return cL;
@@ -109,6 +110,8 @@ public class ChromaticMethods {
         //return the (unsorted) array of degrees
         return D;
     }
+
+
 
     /**
      * calculate the number of different colors among the colored vertices adjacent to a specified vertex
