@@ -54,6 +54,16 @@ public class ChromaticMethods {
         return cL;
     }
 
+    public static int[] colorWelshPowell(boolean[][] adjacencyMatrix){
+        int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
+        int[] degs = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
+        cL[indexOfMax(degs)] = 1; // highest degree vertex get first color
+
+
+
+        return cL;
+    }
+
     /**
      * true if integer array contains a zero
      *
@@ -191,6 +201,15 @@ public class ChromaticMethods {
                 adjColors.add(colorList[i]);
         }
         return adjColors;
+    }
+    public static ArrayList<Integer> uncoloredNotAdjacentSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex){
+        ArrayList<Integer> set = new ArrayList<>(); // set to contain indices of uncolored non adjacent vertices
+        for (int i = 0; i < colorList.length; i++) {
+            if (!adjacencyMatrix[vertex][i] && colorList[i] == 0){ // vertex added iff non adjacent and uncolored
+                set.add(i);
+            }
+        }
+        return set;
     }
 
     /**

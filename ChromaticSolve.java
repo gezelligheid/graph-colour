@@ -120,15 +120,19 @@ public class ChromaticSolve {
 
         System.out.println("--");
         // testing the dsatur algo
-        int[] coloring = ChromaticMethods.colorDSATUR(a);
-        System.out.println(Arrays.toString(coloring));
-        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-        ChromaticMethods.showConflicts(a,coloring);
+//        int[] coloring = ChromaticMethods.colorDSATUR(a);
+//        System.out.println(Arrays.toString(coloring));
+//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+//        ChromaticMethods.showConflicts(a,coloring);
+
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(a);
 
 //        // testing single vertex saturation method
-//        int[] fakeColorlist = {0, 2, 3, 0, 5, 6};
+        int[] fakeColorlist = {1, 0, 3, 0, 0, 0};
+        // testing uncolored non adjacent method
+//        ArrayList<Integer> uncoloredNonAdjacent = ChromaticMethods.uncoloredNotAdjacentSet(a,fakeColorlist,0);
+//        System.out.println(uncoloredNonAdjacent);
 //        // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
 //        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
 //        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
