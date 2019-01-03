@@ -3,8 +3,9 @@
  * undirected graphs
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
+
+import static java.util.stream.Collectors.toMap;
 
 public class ChromaticMethods {
 
@@ -43,12 +44,12 @@ public class ChromaticMethods {
      */
     public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
-        int[] degs = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        cL[indexOfMax(degs)] = 1; // highest degree vertex get first color
+        int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
+        cL[indexOfMax(degrees)] = 1; // highest degree vertex get first color
 
         while (containsZero(cL)) {
             int[] uVS = uncoloredSaturations(adjacencyMatrix, cL); // set containing saturation levels of uncolored v
-            int vChoice = selectVertexDSATUR(uVS, degs);
+            int vChoice = selectVertexDSATUR(uVS, degrees);
             cL[vChoice] = assignColorDSATUR(adjacencyMatrix, cL, vChoice);
         }
         return cL;
@@ -56,14 +57,16 @@ public class ChromaticMethods {
 
     public static int[] colorWelshPowell(boolean[][] adjacencyMatrix){
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
-        int[] degs = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        cL[indexOfMax(degs)] = 1; // highest degree vertex get first color
+        int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
+        cL[indexOfMax(degrees)] = 1; // highest degree vertex get first color
 
         // to be implemented
 
 
         return cL;
     }
+
+
 
     /**
      * true if integer array contains a zero
@@ -111,6 +114,19 @@ public class ChromaticMethods {
         return D;
     }
 
+    public static Map<Integer,Integer> sortedHashDegreeSet (boolean[][] adjacencyMatrix){
+        Map<Integer,Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
+
+        for (int i = 0; i < adjacencyMatrix[0].length; i++) {
+            degrees.put(i, singleVertexDegree(adjacencyMatrix,i));
+        }
+        Map<Integer,Integer> sorted = degrees
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
+        return sorted;
+    }
 
 
     /**
