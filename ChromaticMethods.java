@@ -58,9 +58,15 @@ public class ChromaticMethods {
     public static int[] colorWelshPowell(boolean[][] adjacencyMatrix){
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
         int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        cL[indexOfMax(degrees)] = 1; // highest degree vertex get first color
+        int firstVertex = indexOfMax(degrees);
+        int activeColor = 1;
+        cL[firstVertex] = activeColor; // highest degree vertex get first color
+        ArrayList<Integer> nonAdjacentSet = uncoloredNotAdjacentSet(adjacencyMatrix,cL,firstVertex);
 
-        // to be implemented
+        while (containsZero(cL)){
+
+        }
+
 
 
         return cL;
@@ -127,6 +133,15 @@ public class ChromaticMethods {
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         return sorted;
     }
+    public static Map<Integer,Integer> unSortedHashDegreeSet (boolean[][] adjacencyMatrix){
+        Map<Integer,Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
+
+        for (int i = 0; i < adjacencyMatrix[0].length; i++) {
+            degrees.put(i, singleVertexDegree(adjacencyMatrix,i));
+        }
+        return degrees;
+    }
+
 
 
     /**

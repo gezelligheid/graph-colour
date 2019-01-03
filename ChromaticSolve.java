@@ -16,6 +16,7 @@ public class ChromaticSolve {
     public final static String COMMENT = "//";
 
     public static void main(String[] args) {
+        final long startReading = System.currentTimeMillis();
         if (args.length < 1) {
             System.out.println("Error! No filename specified.");
             System.exit(0);
@@ -24,7 +25,7 @@ public class ChromaticSolve {
 
         String inputfile = args[0];
 
-        boolean seen[] = null;
+        boolean[] seen = null;
 
         //! n is the number of vertices in the graph
         int n = -1;
@@ -33,7 +34,7 @@ public class ChromaticSolve {
         int m = -1;
 
         //! e will contain the edges of the graph
-        ColEdge e[] = null;
+        ColEdge[] e = null;
 
         try {
             FileReader fr = new FileReader(inputfile);
@@ -113,21 +114,32 @@ public class ChromaticSolve {
         //! there will be n vertices in the graph, numbered 1 to n
 
         //! INSERT YOUR CODE HERE!
+        final long doneReading = System.currentTimeMillis(); // tracking reading time
+        System.out.println("Reading time: " + (doneReading - startReading)  + " ms");
 
+        final long startTime = System.currentTimeMillis(); // timing
         // test calling the adjacencymatrix creator
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
+        // test
+
 
 
         System.out.println("--");
         // testing the dsatur algo
-        int[] coloring = ChromaticMethods.colorDSATUR(a);
-        System.out.println(Arrays.toString(coloring));
-        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-        ChromaticMethods.showConflicts(a,coloring);
+//        int[] coloring = ChromaticMethods.colorDSATUR(a);
+//        System.out.println(Arrays.toString(coloring));
+//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+//        ChromaticMethods.showConflicts(a,coloring);
+
+
 
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(a);
 
+        // testing the sorted degree map
+
+        Map<Integer,Integer> testMap = ChromaticMethods.unSortedHashDegreeSet(a);
+        System.out.println(testMap);
 //        // testing single vertex saturation method
 //        int[] fakeColorlist = {1, 0, 3, 0, 0, 0};
 //        testing uncolored non adjacent method
@@ -162,6 +174,9 @@ public class ChromaticSolve {
 //        // testing the degree set making
 //        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
 //        // System.out.println(Arrays.toString(degSet));
+        final long endTime = System.currentTimeMillis();
+
+        System.out.println("Execution time: " + (endTime - startTime)  + " ms");
     }
 
 }
