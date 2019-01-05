@@ -125,11 +125,11 @@ public class ChromaticSolve {
 
 
         System.out.println("--");
-        // testing the dsatur algo
-//        int[] coloring = ChromaticMethods.colorDSATUR(a);
-//        System.out.println(Arrays.toString(coloring));
-//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-//        ChromaticMethods.showConflicts(a,coloring);
+         //testing the dsatur algo
+        int[] coloring = ChromaticMethods.colorDSATUR(a);
+        System.out.println(Arrays.toString(coloring));
+        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+        ChromaticMethods.showConflicts(a,coloring);
 
 
 
@@ -138,8 +138,8 @@ public class ChromaticSolve {
 
         // testing the sorted degree map
 
-        Map<Integer,Integer> testMap = ChromaticMethods.unSortedHashDegreeSet(a);
-        System.out.println(testMap);
+//        Map<Integer,Integer> testMap = ChromaticMethods.unSortedHashDegreeSet(a);
+//        System.out.println(testMap);
 //        // testing single vertex saturation method
 //        int[] fakeColorlist = {1, 0, 3, 0, 0, 0};
 //        testing uncolored non adjacent method
