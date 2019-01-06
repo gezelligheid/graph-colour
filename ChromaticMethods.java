@@ -49,36 +49,39 @@ public class ChromaticMethods {
 
         while (containsZero(cL)) {
             int[] uVS = uncoloredSaturations(adjacencyMatrix, cL); // set containing saturation levels of uncolored v
-            int vChoice = selectVertexDSATUR(uVS, degrees);
-            cL[vChoice] = assignColorDSATUR(adjacencyMatrix, cL, vChoice);
+            int vChoice = selectVertexDSATUR(uVS, degrees); // vertex chosen to be colored
+            cL[vChoice] = assignColorDSATUR(adjacencyMatrix, cL, vChoice); // color gets assigned
         }
         return cL;
     }
 
-    public static int[] colorWelshPowell(boolean[][] adjacencyMatrix){
+    public static int[] colorWelshPowell(boolean[][] adjacencyMatrix) {
         int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
         int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        int firstVertex = indexOfMax(degrees);
         int activeColor = 1;
-        cL[firstVertex] = activeColor; // highest degree vertex get first color
-        ArrayList<Integer> nonAdjacentSet = uncoloredNotAdjacentSet(adjacencyMatrix,cL,firstVertex);
 
-        while (containsZero(cL)){
+        while (containsZero(cL)) {
+            int selectedVertex = indexOfMax(degrees); // select highest degree vertex
+            cL[selectedVertex] = activeColor; // highest degree vertex get first color
+            ArrayList<Integer> nonAdjacentSet = uncoloredNotAdjacentSet(adjacencyMatrix, cL, selectedVertex);
+            while (nonAdjacentSet.size() > 0) {
 
+            }
+            degrees[selectedVertex] = -1; // as a means of excluding the vertex from selection
+            activeColor++;
         }
-
 
 
         return cL;
     }
-
 
 
     /**
      * true if integer array contains a zero
      *
      * @param array
-     * @return whether contains a zero value*/
+     * @return whether contains a zero value
+     */
     public static boolean containsZero(int[] array) {
         for (int i1 : array) {
             if (i1 == 0) return true;
@@ -120,28 +123,42 @@ public class ChromaticMethods {
         return D;
     }
 
-    public static Map<Integer,Integer> sortedHashDegreeSet (boolean[][] adjacencyMatrix){
-        Map<Integer,Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
+    /**
+     * creates a hashmap with keys as the vertex  index, and degrees as values.
+     * sorted by value in descending order
+     *
+     * @param adjacencyMatrix the graph
+     * @return the sorted hashmap
+     */
+    public static Map<Integer, Integer> sortedHashDegreeSet(boolean[][] adjacencyMatrix) {
+        Map<Integer, Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
 
         for (int i = 0; i < adjacencyMatrix[0].length; i++) {
-            degrees.put(i, singleVertexDegree(adjacencyMatrix,i));
+            degrees.put(i, singleVertexDegree(adjacencyMatrix, i));
         }
-        Map<Integer,Integer> sorted = degrees
+        Map<Integer, Integer> sorted = degrees
                 .entrySet()
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         return sorted;
     }
-    public static Map<Integer,Integer> unSortedHashDegreeSet (boolean[][] adjacencyMatrix){
-        Map<Integer,Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
+
+    /**
+     * creates a hashmap with keys as the vertex  index, and degrees as values.
+     *
+     *
+     * @param adjacencyMatrix the graph
+     * @return the hashmap
+     */
+    public static Map<Integer, Integer> unSortedHashDegreeSet(boolean[][] adjacencyMatrix) {
+        Map<Integer, Integer> degrees = new HashMap<>(); // the map  containing index as key and degree as value
 
         for (int i = 0; i < adjacencyMatrix[0].length; i++) {
-            degrees.put(i, singleVertexDegree(adjacencyMatrix,i));
+            degrees.put(i, singleVertexDegree(adjacencyMatrix, i));
         }
         return degrees;
     }
-
 
 
     /**
@@ -236,10 +253,11 @@ public class ChromaticMethods {
         }
         return adjColors;
     }
-    public static ArrayList<Integer> uncoloredNotAdjacentSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex){
+
+    public static ArrayList<Integer> uncoloredNotAdjacentSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         ArrayList<Integer> set = new ArrayList<>(); // set to contain indices of uncolored non adjacent vertices
         for (int i = 0; i < colorList.length; i++) {
-            if (!adjacencyMatrix[vertex][i] && colorList[i] == 0){ // vertex added iff non adjacent and uncolored
+            if (!adjacencyMatrix[vertex][i] && colorList[i] == 0) { // vertex added iff non adjacent and uncolored
                 set.add(i);
             }
         }
@@ -278,9 +296,9 @@ public class ChromaticMethods {
      * otherwise, we just pick the first/lowest number that it is not in the set.
      *
      * @param adjacencyMatrix the graph
-     * @param colorList current coloring
-     * @param vertex to color
-     * */
+     * @param colorList       current coloring
+     * @param vertex          to color
+     */
     public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         int activeColor = 1; // default color
         int maxColor = colorList[indexOfMax(colorList)]; // number of colors in use
@@ -296,20 +314,21 @@ public class ChromaticMethods {
         }
         return activeColor; // the color number assigned to the vertex
     }
+
     /**
      * verifies that no colors are conflicting by iterationg over the adjacency matrix
      * on one side of the diagonal
      * creates a list of conflicts that has the conflicting elements
      *
      * @param adjacencyMatrix the graph
-     * @param colorlist the coloring to be tested
-     * */
-    public static void showConflicts(boolean[][] adjacencyMatrix, int[] colorlist){
+     * @param colorlist       the coloring to be tested
+     */
+    public static void showConflicts(boolean[][] adjacencyMatrix, int[] colorlist) {
         ArrayList<String> conflicts = new ArrayList<>();
         for (int i = 0; i < colorlist.length; i++) {
             for (int j = 0; j < i; j++) {
-                if (adjacencyMatrix[i][j] && colorlist[i] == colorlist[j]){
-                    conflicts.add( j + "and " + i +", ");
+                if (adjacencyMatrix[i][j] && colorlist[i] == colorlist[j]) {
+                    conflicts.add(j + "and " + i + ", ");
                 }
             }
         }
