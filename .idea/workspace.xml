@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="131" column="51" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="51" />
+            <state relative-caret-position="816">
+              <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,14 +69,13 @@
       <list>
         <option value="$PROJECT_DIR$/ReadGraph.java" />
         <option value="$PROJECT_DIR$/graphToAdjacency.java" />
-        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
         <option value="$PROJECT_DIR$/ChromaticMethods.java" />
+        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="411" />
-    <option name="y" value="1" />
+    <option name="x" value="-2" />
     <option name="width" value="2121" />
     <option name="height" value="2106" />
   </component>
@@ -152,7 +153,7 @@
       <workItem from="1545989731011" duration="65453000" />
       <workItem from="1546764446529" duration="4314000" />
       <workItem from="1546867389262" duration="2094000" />
-      <workItem from="1546932467371" duration="1659000" />
+      <workItem from="1546932467371" duration="2480000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -308,14 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546932654706</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="new adjacencymatrix method ready for testing">
+      <created>1546935060284</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1546935060284</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78261000" />
+    <option name="totallyTimeSpent" value="79082000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="235" y="1" width="1212" height="1203" extended-state="0" />
+    <frame x="-1" y="0" width="1212" height="1203" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17071058" />
@@ -380,7 +388,8 @@
     <MESSAGE value="test setup" />
     <MESSAGE value="minor progress on welsh-powell" />
     <MESSAGE value="changed variable name" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed variable name" />
+    <MESSAGE value="new adjacencymatrix method ready for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="new adjacencymatrix method ready for testing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -442,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="131" column="51" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="51" />
+        <state relative-caret-position="816">
+          <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

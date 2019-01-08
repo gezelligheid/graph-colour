@@ -115,26 +115,33 @@ public class ChromaticSolve {
 
         //! INSERT YOUR CODE HERE!
         final long doneReading = System.currentTimeMillis(); // tracking reading time
-        System.out.println("Reading time: " + (doneReading - startReading)  + " ms");
+        System.out.println("Reading time: " + (doneReading - startReading) + " ms");
 
         final long startTime = System.currentTimeMillis(); // timing
         // test calling the adjacencymatrix creator
+        final long startA = System.currentTimeMillis();
         boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
+        final long endA = System.currentTimeMillis();
+        System.out.println("method A: " + (endA - startA) + " ms");
+
+        final long startB = System.currentTimeMillis();
+
         // test
-
-
+        boolean[][] b = ChromaticMethods.makeAdjacencyMatrixAlternative(n, e);
+        final long endB = System.currentTimeMillis();
+        System.out.println("method B: " + (endB - startB) + " ms");
 
         System.out.println("--");
-         //testing the dsatur algo
-        int[] coloring = ChromaticMethods.colorDSATUR(a);
-        System.out.println(Arrays.toString(coloring));
-        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-        ChromaticMethods.showConflicts(a,coloring);
-
+        //testing the dsatur algo
+//        int[] coloring = ChromaticMethods.colorDSATUR(a);
+//        System.out.println(Arrays.toString(coloring));
+//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+//        ChromaticMethods.showConflicts(a, coloring);
 
 
         // print the matrix to test
-        //GenerateRandomGraph.matrix2DPrint(a);
+//        GenerateRandomGraph.matrix2DPrint(a);
+
 
         // testing the sorted degree map
 
@@ -176,7 +183,7 @@ public class ChromaticSolve {
 //        // System.out.println(Arrays.toString(degSet));
         final long endTime = System.currentTimeMillis();
 
-        System.out.println("Execution time: " + (endTime - startTime)  + " ms");
+        System.out.println("Execution time: " + (endTime - startTime) + " ms");
     }
 
 }
