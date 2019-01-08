@@ -36,6 +36,15 @@ public class ChromaticMethods {
         return a;
     }
 
+    public static boolean[][] makeAdjacencyMatrixAlternative(int vertices, ColEdge[] edges) {
+        boolean[][] adjacencyMatrix = new boolean[vertices][vertices];
+        for (ColEdge edge : edges) {
+            adjacencyMatrix[edge.u - 1][edge.v - 1] = true; // edges are numbered 1 to n so have to be corrected
+            adjacencyMatrix[edge.v - 1][edge.u - 1] = true;
+        }
+        return adjacencyMatrix;
+    }
+
     /**
      * provides a graph coloring based on the degree of saturation algorithm
      *
@@ -148,7 +157,6 @@ public class ChromaticMethods {
 
     /**
      * creates a hashmap with keys as the vertex  index, and degrees as values.
-     *
      *
      * @param adjacencyMatrix the graph
      * @return the hashmap
