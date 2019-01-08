@@ -119,24 +119,21 @@ public class ChromaticSolve {
 
         final long startTime = System.currentTimeMillis(); // timing
         // test calling the adjacencymatrix creator
-        final long startA = System.currentTimeMillis();
-        boolean[][] a = ChromaticMethods.makeAdjacencyMatrix(n, e);
-        final long endA = System.currentTimeMillis();
-        System.out.println("method A: " + (endA - startA) + " ms");
+
 
         final long startB = System.currentTimeMillis();
 
         // test
-        boolean[][] b = ChromaticMethods.makeAdjacencyMatrixAlternative(n, e);
+        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrixAlternative(n, e);
         final long endB = System.currentTimeMillis();
         System.out.println("method B: " + (endB - startB) + " ms");
 
         System.out.println("--");
         //testing the dsatur algo
-//        int[] coloring = ChromaticMethods.colorDSATUR(a);
-//        System.out.println(Arrays.toString(coloring));
-//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-//        ChromaticMethods.showConflicts(a, coloring);
+        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+        System.out.println(Arrays.toString(coloring));
+        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
 
         // print the matrix to test
