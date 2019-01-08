@@ -43,16 +43,18 @@ public class ChromaticMethods {
      * @return the the list with a coloring that can be seen as an upper bound
      */
     public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {
-        int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
+        int[] colorList = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
         int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        cL[indexOfMax(degrees)] = 1; // highest degree vertex get first color
+        colorList[indexOfMax(degrees)] = 1; // highest degree vertex get first color
 
-        while (containsZero(cL)) {
-            int[] uVS = uncoloredSaturations(adjacencyMatrix, cL); // set containing saturation levels of uncolored v
-            int vChoice = selectVertexDSATUR(uVS, degrees); // vertex chosen to be colored
-            cL[vChoice] = assignColorDSATUR(adjacencyMatrix, cL, vChoice); // color gets assigned
+        while (containsZero(colorList)) {
+            int[] uVS = uncoloredSaturations(adjacencyMatrix, colorList); // set containing saturation levels of uncolored v
+            // uncolored vertex with largest number of different colors among it's adjacent vertices is selected
+            // a tie is broken by selecting the highest degree among equal saturated candidates
+            int vChoice = selectVertexDSATUR(uVS, degrees);
+            colorList[vChoice] = assignColorDSATUR(adjacencyMatrix, colorList, vChoice); // color gets assigned
         }
-        return cL;
+        return colorList;
     }
 
     public static int[] colorWelshPowell(boolean[][] adjacencyMatrix) {

@@ -25,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
+            <state relative-caret-position="2329">
               <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="141" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+            <state relative-caret-position="17">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -68,15 +68,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-93" />
+    <option name="x" value="411" />
+    <option name="y" value="1" />
     <option name="width" value="2121" />
-    <option name="height" value="2102" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,7 +90,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -144,7 +145,8 @@
       <workItem from="1543410645493" duration="4097000" />
       <workItem from="1544712987824" duration="374000" />
       <workItem from="1545989731011" duration="65453000" />
-      <workItem from="1546764446529" duration="3458000" />
+      <workItem from="1546764446529" duration="4314000" />
+      <workItem from="1546867389262" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -286,17 +288,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546697506624</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="minor progress on welsh-powell">
+      <created>1546772046916</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1546772046917</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73652000" />
+    <option name="totallyTimeSpent" value="76602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-53" y="0" width="1212" height="1201" extended-state="0" />
+    <frame x="-54" y="0" width="1212" height="1202" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16551127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16811092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -356,7 +365,8 @@
     <MESSAGE value="sorted map of degree ready for testing" />
     <MESSAGE value="some tweaking with welsh powell" />
     <MESSAGE value="test setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="test setup" />
+    <MESSAGE value="minor progress on welsh-powell" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor progress on welsh-powell" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -407,7 +417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
+        <state relative-caret-position="2329">
           <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="141" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -417,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        <state relative-caret-position="17">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
