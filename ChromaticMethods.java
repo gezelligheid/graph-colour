@@ -10,7 +10,7 @@ import static java.util.stream.Collectors.toMap;
 public class ChromaticMethods {
 
     /**
-     * method to create an adjacency matrix out of the specified edges
+     * method to create a boolean adjacency matrix out of the specified edges
      *
      * @param vertices number of vertices of a graph
      * @param edges    object containing the indexnumbers of two vertices that have an edge beetween them
@@ -25,6 +25,23 @@ public class ChromaticMethods {
         }
         return adjacencyMatrix;
     }
+    /**
+     * method to create an integer adjacency matrix out of the specified edges
+     *
+     * @param vertices number of vertices of a graph
+     * @param edges    object containing the indexnumbers of two vertices that have an edge beetween them
+     * @return the adjacency matrix of the graph
+     */
+
+    public static int[][] makeIntegerAdjacencyMatrix(int vertices, ColEdge[] edges) {
+        int[][] adjacencyMatrix = new int[vertices][vertices];
+        for (ColEdge edge : edges) {
+            adjacencyMatrix[edge.u - 1][edge.v - 1] = 1; // edges are numbered 1 to n so have to be corrected
+            adjacencyMatrix[edge.v - 1][edge.u - 1] = 1;
+        }
+        return adjacencyMatrix;
+    }
+
 
     /**
      * provides a graph coloring based on the degree of saturation algorithm
