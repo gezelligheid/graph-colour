@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/someResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/someResults.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="135" column="54" selection-start-line="135" selection-start-column="54" selection-end-line="135" selection-end-column="54" />
+            <state relative-caret-position="565">
+              <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,9 +73,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+    <option name="x" value="-4" />
     <option name="width" value="2121" />
-    <option name="height" value="2106" />
+    <option name="height" value="2107" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -317,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546935060284</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="found chromatic number on monstergraph B3-05 (bipartite)">
+      <created>1546936754143</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1546936754143</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79706000" />
+    <option name="totallyTimeSpent" value="80660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1212" height="1203" extended-state="0" />
@@ -390,7 +395,8 @@
     <MESSAGE value="minor progress on welsh-powell" />
     <MESSAGE value="changed variable name" />
     <MESSAGE value="new adjacencymatrix method ready for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="new adjacencymatrix method ready for testing" />
+    <MESSAGE value="found chromatic number on monstergraph B3-05 (bipartite)" />
+    <option name="LAST_COMMIT_MESSAGE" value="found chromatic number on monstergraph B3-05 (bipartite)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -452,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="135" column="54" selection-start-line="135" selection-start-column="54" selection-end-line="135" selection-end-column="54" />
+        <state relative-caret-position="565">
+          <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

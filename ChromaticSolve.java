@@ -118,15 +118,10 @@ public class ChromaticSolve {
         System.out.println("Reading time: " + (doneReading - startReading) + " ms");
 
         final long startTime = System.currentTimeMillis(); // timing
-        // test calling the adjacencymatrix creator
+        // calling the adjacencymatrix creator
 
+        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
 
-        final long startB = System.currentTimeMillis();
-
-        // test
-        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrixAlternative(n, e);
-        final long endB = System.currentTimeMillis();
-        System.out.println("method B: " + (endB - startB) + " ms");
 
         System.out.println("--");
         //testing the dsatur algo
