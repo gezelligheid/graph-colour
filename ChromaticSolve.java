@@ -11,7 +11,7 @@ class ColEdge {
 
 public class ChromaticSolve {
 
-    public final static boolean DEBUG = false;
+    public final static boolean DEBUG = true;
 
     public final static String COMMENT = "//";
 
@@ -153,7 +153,7 @@ public class ChromaticSolve {
 //
         final long startTest = System.currentTimeMillis(); // timing
         // testing the odd cycle
-        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,0);
+        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
         if (hasOddCycle) System.out.println("odd cycle found");
         else System.out.println("no odd cycle found");
         int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);

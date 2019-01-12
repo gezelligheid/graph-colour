@@ -25,6 +25,7 @@ public class ChromaticMethods {
         }
         return adjacencyMatrix;
     }
+
     /**
      * method to create an integer adjacency matrix out of the specified edges
      *
@@ -42,7 +43,12 @@ public class ChromaticMethods {
         return adjacencyMatrix;
     }
 
-    public static boolean hasOddCycle(boolean[][] adjacencyMatrix, int vertices, int start){
+    /**
+     * to detect odd cycles
+     * the starting vertex must have degree > 0 else it will give a false negative
+     *
+     * */
+    public static boolean hasOddCycle(boolean[][] adjacencyMatrix, int vertices, int start) {
         // define local variables
         int[] colorArray = new int[vertices];
         Arrays.fill(colorArray, -1); // -1 means no color assigned, 1 means the first color, 0 the second.
@@ -52,17 +58,19 @@ public class ChromaticMethods {
         LinkedList<Integer> queue = new LinkedList<Integer>();
         queue.add(start);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             // take a vertex from the queue
             int toCheck = queue.peek();
+            System.out.println("vertex to check is: " + toCheck);
             queue.pop();
 
             // find non colored adjacent vertices
             for (int i = 0; i < vertices; i++) {
                 // whenever and edge from the vertex toCheck to another exists and that vertex is uncolored
-                if (adjacencyMatrix[toCheck][i] && colorArray[i] == -1){
+                if (adjacencyMatrix[toCheck][i] && colorArray[i] == -1) {
                     // the alternate color is assigned to this vertex
                     colorArray[i] = 1 - colorArray[toCheck];
+                    System.out.println((1 - colorArray[toCheck]) + " assigned to vertex index " + i);
                     queue.push(i);
                 }
                 // otherwise an edge exists and the same color is used
@@ -73,8 +81,6 @@ public class ChromaticMethods {
         // the graph is two colorable
         return false;
     }
-
-
 
 
     /**
@@ -161,7 +167,7 @@ public class ChromaticMethods {
         // fill the degree array with vertex index with the value as it's degree
         for (int i = 0; i < adjacencyMatrix.length; i++) {
             for (int j = i + 1; j < adjacencyMatrix.length; j++) {
-                if (adjacencyMatrix[i][j]){
+                if (adjacencyMatrix[i][j]) {
                     DegreeSet[i]++;
                     DegreeSet[j]++;
                 }
