@@ -133,7 +133,12 @@ public class ChromaticMethods {
         int[] DegreeSet = new int[adjacencyMatrix.length];
         // fill the degree array with vertex index with the value as it's degree
         for (int i = 0; i < adjacencyMatrix.length; i++) {
-            DegreeSet[i] = singleVertexDegree(adjacencyMatrix, i);
+            for (int j = i + 1; j < adjacencyMatrix.length; j++) {
+                if (adjacencyMatrix[i][j]){
+                    DegreeSet[i]++;
+                    DegreeSet[j]++;
+                }
+            }
         }
         //return the (unsorted) array of degrees
         return DegreeSet;
