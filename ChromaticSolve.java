@@ -128,10 +128,10 @@ public class ChromaticSolve {
 
         System.out.println("--");
         //testing the dsatur algo
-        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
-        System.out.println(Arrays.toString(coloring));
-        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
+//        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+//        System.out.println(Arrays.toString(coloring));
+//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+//        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
 
         // print the matrix to test
@@ -151,9 +151,12 @@ public class ChromaticSolve {
 //        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
 //        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 //
-//        int[] degs = ChromaticMethods.makeDegreeSet(a);
+        final long startTest = System.currentTimeMillis(); // timing
+        int[] degs = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
+        final long endTest = System.currentTimeMillis(); // timing
+        System.out.println("testTime: " + (endTest - startTest));
 //        degs[3] = 4;
-//        System.out.println("deg list: " + Arrays.toString(degs));
+        System.out.println("deg list: " + Arrays.toString(degs));
 //        // testing the indexofmax method
 //        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
 //        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));

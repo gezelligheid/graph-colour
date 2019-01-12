@@ -42,6 +42,13 @@ public class ChromaticMethods {
         return adjacencyMatrix;
     }
 
+    public static boolean isTree(boolean adjacencyMatrix){
+        // define local variables
+
+        // pick a starting vertex
+        return true;
+    }
+
 
     /**
      * provides a graph coloring based on the degree of saturation algorithm
@@ -55,10 +62,10 @@ public class ChromaticMethods {
         colorList[indexOfMax(degrees)] = 1; // highest degree vertex get first color
 
         while (containsZero(colorList)) {
-            int[] uVS = uncoloredSaturations(adjacencyMatrix, colorList); // set containing saturation levels of uncolored v
+            int[] uncoloredVertexSaturations = uncoloredSaturations(adjacencyMatrix, colorList); // set containing saturation levels of uncolored v
             // uncolored vertex with largest number of different colors among it's adjacent vertices is selected
             // a tie is broken by selecting the highest degree among equal saturated candidates
-            int vChoice = selectVertexDSATUR(uVS, degrees);
+            int vChoice = selectVertexDSATUR(uncoloredVertexSaturations, degrees);
             colorList[vChoice] = assignColorDSATUR(adjacencyMatrix, colorList, vChoice); // color gets assigned
         }
         return colorList;
@@ -123,13 +130,13 @@ public class ChromaticMethods {
      */
     public static int[] makeDegreeSet(boolean[][] adjacencyMatrix) {
         // define array
-        int[] D = new int[adjacencyMatrix.length];
+        int[] DegreeSet = new int[adjacencyMatrix.length];
         // fill the degree array with vertex index with the value as it's degree
         for (int i = 0; i < adjacencyMatrix.length; i++) {
-            D[i] = singleVertexDegree(adjacencyMatrix, i);
+            DegreeSet[i] = singleVertexDegree(adjacencyMatrix, i);
         }
         //return the (unsorted) array of degrees
-        return D;
+        return DegreeSet;
     }
 
     /**
