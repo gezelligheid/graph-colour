@@ -2,8 +2,6 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.Math;
-import Jama.Matrix;
-import Jama.EigenvalueDecomposition;
 
 class ColEdge {
     int u;
@@ -123,20 +121,21 @@ public class ChromaticSolve {
         // calling the adjacencymatrix creator
 
         boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
-        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
+//        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
+//        Matrix matrix =
 
 
 
         System.out.println("--");
         //testing the dsatur algo
-//        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
-//        System.out.println(Arrays.toString(coloring));
-//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
-//        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
+        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+        System.out.println(Arrays.toString(coloring));
+        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
 
         // print the matrix to test
-        GenerateRandomGraph.matrix2DPrint(adjacencyMatrix);
+        //GenerateRandomGraph.matrix2DPrint(adjacencyMatrix);
 
 
         // testing the sorted degree map

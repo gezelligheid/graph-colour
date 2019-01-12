@@ -204,13 +204,13 @@ public class ChromaticMethods {
      * @return list with contents as described
      */
     public static int[] uncoloredSaturations(boolean[][] adjacencyMatrix, int[] colorList) {
-        int[] uS = new int[colorList.length]; // create uncolored saturation array
-        Arrays.fill(uS, -1); // -1 in order to distinguish between uncolored and unsaturated
+        int[] uncoloredSaturations = new int[colorList.length]; // create uncolored saturation array
+        Arrays.fill(uncoloredSaturations, -1); // -1 in order to distinguish between uncolored and unsaturated
         // loop over all vertices
-        for (int i = 0; i < uS.length; i++) { // only uncolored vertices are considered
-            if (colorList[i] == 0) uS[i] = singleVertexSaturation(adjacencyMatrix, colorList, i);
+        for (int i = 0; i < uncoloredSaturations.length; i++) { // only uncolored vertices are considered
+            if (colorList[i] == 0) uncoloredSaturations[i] = singleVertexSaturation(adjacencyMatrix, colorList, i);
         }
-        return uS;
+        return uncoloredSaturations;
     }
 
     /**
@@ -310,12 +310,12 @@ public class ChromaticMethods {
     public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         int activeColor = 1; // default color
         int maxColor = colorList[indexOfMax(colorList)]; // number of colors in use
-        ArrayList<Integer> adjSet = vertexAdjacentColorsSet(adjacencyMatrix, colorList, vertex);
+        ArrayList<Integer> adjacentColorsSet = vertexAdjacentColorsSet(adjacencyMatrix, colorList, vertex);
         // new color is needed when all current colors are adjacent
-        if (adjSet.size() == maxColor) return maxColor + 1;
+        if (adjacentColorsSet.size() == maxColor) return maxColor + 1;
         // otherwise we assign the first color that fits
         for (int i = 1; i <= maxColor; i++) {
-            if (!adjSet.contains(i)) {
+            if (!adjacentColorsSet.contains(i)) {
                 activeColor = i;
                 break;
             }
