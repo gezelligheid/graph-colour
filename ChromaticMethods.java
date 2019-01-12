@@ -42,12 +42,39 @@ public class ChromaticMethods {
         return adjacencyMatrix;
     }
 
-    public static boolean isTree(boolean adjacencyMatrix){
+    public static boolean hasOddCycle(boolean[][] adjacencyMatrix, int vertices, int start){
         // define local variables
-
+        int[] colorArray = new int[vertices];
+        Arrays.fill(colorArray, -1); // -1 means no color assigned, 1 means the first color, 0 the second.
         // pick a starting vertex
-        return true;
+        colorArray[start] = 1; // color with the first color
+        // create a queue of vertex numbers abd add the starting vertex
+        LinkedList<Integer> queue = new LinkedList<Integer>();
+        queue.add(start);
+
+        while (!queue.isEmpty()){
+            // take a vertex from the queue
+            int toCheck = queue.peek();
+            queue.pop();
+
+            // find non colored adjacent vertices
+            for (int i = 0; i < vertices; i++) {
+                // whenever and edge from the vertex toCheck to another exists and that vertex is uncolored
+                if (adjacencyMatrix[toCheck][i] && colorArray[i] == -1){
+                    // the alternate color is assigned to this vertex
+                    colorArray[i] = 1 - colorArray[toCheck];
+                    queue.push(i);
+                }
+                // otherwise an edge exists and the same color is used
+                else if (adjacencyMatrix[toCheck][i] && colorArray[toCheck] == colorArray[i])
+                    return true; // the odd cycle is found
+            }
+        }
+        // the graph is two colorable
+        return false;
     }
+
+
 
 
     /**

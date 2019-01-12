@@ -152,11 +152,15 @@ public class ChromaticSolve {
 //        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 //
         final long startTest = System.currentTimeMillis(); // timing
-        int[] degs = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
+        // testing the odd cycle
+        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,0);
+        if (hasOddCycle) System.out.println("odd cycle found");
+        else System.out.println("no odd cycle found");
+        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
         final long endTest = System.currentTimeMillis(); // timing
-        System.out.println("testTime: " + (endTest - startTest));
+        System.out.println("testTime: " + (endTest - startTest) + " ms");
 //        degs[3] = 4;
-        System.out.println("deg list: " + Arrays.toString(degs));
+        System.out.println("deg list: " + Arrays.toString(degrees));
 //        // testing the indexofmax method
 //        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
 //        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
