@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="940">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="1978">
+              <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
+            <state relative-caret-position="289">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -81,8 +81,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="width" value="1803" />
+    <option name="x" value="-16" />
+    <option name="width" value="1936" />
     <option name="height" value="2102" />
   </component>
   <component name="ProjectView">
@@ -90,7 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,6 +101,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -167,7 +167,8 @@
       <workItem from="1547150444989" duration="988000" />
       <workItem from="1547200196721" duration="2942000" />
       <workItem from="1547279713310" duration="2575000" />
-      <workItem from="1547311306785" duration="7737000" />
+      <workItem from="1547311306785" duration="8353000" />
+      <workItem from="1547391681003" duration="5414000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -372,17 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547315539822</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="debugging cycle detection">
+      <created>1547320978284</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1547320978284</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97826000" />
+    <option name="totallyTimeSpent" value="103856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1030" height="1201" extended-state="0" />
+    <frame x="-9" y="0" width="1106" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1255144" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.118320614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -422,7 +430,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tested method to create list of vertex saturation working" />
     <MESSAGE value="tested and documented index of max value of an array method" />
     <MESSAGE value="added working method that creates arraylist of indices of array elements with&#10;the same value." />
     <MESSAGE value="started method that assigns the color" />
@@ -447,7 +454,8 @@
     <MESSAGE value="checkpoint small name changes" />
     <MESSAGE value="minor performance increase in the degree set" />
     <MESSAGE value="odd cycle detection works only for strongly connected graphs. gives false negatives for odd cycle if 0 degree vertices exist" />
-    <option name="LAST_COMMIT_MESSAGE" value="odd cycle detection works only for strongly connected graphs. gives false negatives for odd cycle if 0 degree vertices exist" />
+    <MESSAGE value="debugging cycle detection" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging cycle detection" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -498,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="1978">
+          <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -508,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
+        <state relative-caret-position="289">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

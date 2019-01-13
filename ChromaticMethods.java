@@ -9,6 +9,22 @@ import static java.util.stream.Collectors.toMap;
 
 public class ChromaticMethods {
 
+    public static LinkedList<Integer> currentClique; // contains the clique being created
+    public static LinkedList<Integer> MaxClique; // contains the largest clique seen
+
+    public static LinkedList<Integer>[] makeAdjacencyList(int vertices, ColEdge[] edges) {
+        LinkedList<Integer>[] adjacencyList = new LinkedList[vertices];
+        for (int i = 0; i < vertices; i++) {
+            adjacencyList[i] = new LinkedList<Integer>();
+        }
+        for (ColEdge edge : edges) {
+            adjacencyList[edge.v - 1].push(edge.u - 1);
+            adjacencyList[edge.u - 1].push(edge.v - 1);
+        }
+        return adjacencyList;
+    }
+
+
     /**
      * method to create a boolean adjacency matrix out of the specified edges
      *
@@ -47,7 +63,10 @@ public class ChromaticMethods {
      * to detect odd cycles
      * the starting vertex must have degree > 0 else it will give a false negative
      *
-     * */
+     * @param adjacencyMatrix the graph
+     * @param vertices        mumber of vertices of the graph
+     * @param start           starting vertex index
+     */
     public static boolean hasOddCycle(boolean[][] adjacencyMatrix, int vertices, int start) {
         // define local variables
         int[] colorArray = new int[vertices];
@@ -82,11 +101,17 @@ public class ChromaticMethods {
         return false;
     }
 
+    public static LinkedList<Integer> maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {
+        while (!candidates.isEmpty()) {
+
+        }
+        return null;
+    }
 
     /**
      * provides a graph coloring based on the degree of saturation algorithm
      *
-     * @param adjacencyMatrix
+     * @param adjacencyMatrix the graph
      * @return the the list with a coloring that can be seen as an upper bound
      */
     public static int[] colorDSATUR(boolean[][] adjacencyMatrix) {

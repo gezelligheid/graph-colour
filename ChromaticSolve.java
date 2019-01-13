@@ -11,7 +11,7 @@ class ColEdge {
 
 public class ChromaticSolve {
 
-    public final static boolean DEBUG = true;
+    public final static boolean DEBUG = false;
 
     public final static String COMMENT = "//";
 
@@ -120,7 +120,7 @@ public class ChromaticSolve {
         final long startTime = System.currentTimeMillis(); // timing
         // calling the adjacencymatrix creator
 
-        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
+//        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
 //        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
 //        Matrix matrix =
 
@@ -153,14 +153,18 @@ public class ChromaticSolve {
 //
         final long startTest = System.currentTimeMillis(); // timing
         // testing the odd cycle
-        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
-        if (hasOddCycle) System.out.println("odd cycle found");
-        else System.out.println("no odd cycle found");
-        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
+//        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
+//        if (hasOddCycle) System.out.println("odd cycle found");
+//        else System.out.println("no odd cycle found");
+//        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
+        // testing linkedlist
+        LinkedList[] adjacencyList = ChromaticMethods.makeAdjacencyList(n,e);
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");
 //        degs[3] = 4;
-        System.out.println("deg list: " + Arrays.toString(degrees));
+        System.out.println(Arrays.toString(adjacencyList));
+        // test print degree array
+//        System.out.println("deg list: " + Arrays.toString(degrees));
 //        // testing the indexofmax method
 //        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
 //        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
