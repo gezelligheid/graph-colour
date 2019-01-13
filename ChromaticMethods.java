@@ -9,8 +9,8 @@ import static java.util.stream.Collectors.toMap;
 
 public class ChromaticMethods {
 
-    public static LinkedList<Integer> currentClique; // contains the clique being created
-    public static LinkedList<Integer> MaxClique; // contains the largest clique seen
+    public static LinkedList<Integer> currentClique = new LinkedList<>(); // contains the clique being created
+    public static LinkedList<Integer> MaxClique = new LinkedList<>(); // contains the largest clique seen
 
     public static LinkedList<Integer>[] makeAdjacencyList(int vertices, ColEdge[] edges) {
         LinkedList<Integer>[] adjacencyList = new LinkedList[vertices];
@@ -24,6 +24,13 @@ public class ChromaticMethods {
         return adjacencyList;
     }
 
+    public static LinkedList<Integer> makeSimpleVerticesList(int vertices){
+        LinkedList<Integer> verticesList = new LinkedList<>();
+        for (int i = 0; i < vertices; i++) {
+            verticesList.add(i);
+        }
+        return verticesList;
+    }
 
     /**
      * method to create a boolean adjacency matrix out of the specified edges
@@ -101,11 +108,11 @@ public class ChromaticMethods {
         return false;
     }
 
-    public static LinkedList<Integer> maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {
+    public static void maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {
         while (!candidates.isEmpty()) {
 
         }
-        return null;
+
     }
 
     /**

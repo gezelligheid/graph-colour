@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1978">
-              <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
+            <state relative-caret-position="397">
+              <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="204">
+              <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -168,7 +168,7 @@
       <workItem from="1547200196721" duration="2942000" />
       <workItem from="1547279713310" duration="2575000" />
       <workItem from="1547311306785" duration="8353000" />
-      <workItem from="1547391681003" duration="5414000" />
+      <workItem from="1547391681003" duration="8043000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -380,11 +380,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547320978284</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="creating adjacencylist method">
+      <created>1547398469120</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1547398469120</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103856000" />
+    <option name="totallyTimeSpent" value="106485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1106" height="1201" extended-state="0" />
@@ -430,7 +437,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tested and documented index of max value of an array method" />
     <MESSAGE value="added working method that creates arraylist of indices of array elements with&#10;the same value." />
     <MESSAGE value="started method that assigns the color" />
     <MESSAGE value="completed color assignment and helper method DSATUR" />
@@ -455,7 +461,8 @@
     <MESSAGE value="minor performance increase in the degree set" />
     <MESSAGE value="odd cycle detection works only for strongly connected graphs. gives false negatives for odd cycle if 0 degree vertices exist" />
     <MESSAGE value="debugging cycle detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging cycle detection" />
+    <MESSAGE value="creating adjacencylist method" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating adjacencylist method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -506,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1978">
-          <caret line="164" column="56" selection-start-line="164" selection-start-column="56" selection-end-line="164" selection-end-column="56" />
+        <state relative-caret-position="397">
+          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -516,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        <state relative-caret-position="204">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

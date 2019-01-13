@@ -163,6 +163,9 @@ public class ChromaticSolve {
         System.out.println("testTime: " + (endTest - startTest) + " ms");
 //        degs[3] = 4;
         System.out.println(Arrays.toString(adjacencyList));
+        // testing vertex list
+        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
+        System.out.println(vertexList);
         // test print degree array
 //        System.out.println("deg list: " + Arrays.toString(degrees));
 //        // testing the indexofmax method
