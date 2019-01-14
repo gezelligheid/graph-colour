@@ -9,7 +9,7 @@ public class Graph {
     /**
      * map interface chosen for it's easy acces, Set Interface prevents duplicate edges
      */
-    public final Map<Integer, Set<Integer>> adjacencyMap = new HashMap<>(); // holds information about the graph
+    private final Map<Integer, Set<Integer>> adjacencyMap = new HashMap<>(); // holds information about the graph
 
     /**
      * if a vertex does not exist in the map.

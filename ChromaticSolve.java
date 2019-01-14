@@ -161,10 +161,12 @@ public class ChromaticSolve {
         Graph myGraph = new Graph();
         myGraph.fillAdjacencyMap(n, e);
 
+        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");
-        System.out.println("size: " + myGraph.getSize());
-        System.out.println("firstVertex (1):  " + myGraph.adjacencyMap.get(1));
+
+        System.out.println(Arrays.toString(clique));
 
         // testing vertex list
 //        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
