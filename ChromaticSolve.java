@@ -160,7 +160,7 @@ public class ChromaticSolve {
         // testing graph class
         Graph myGraph = new Graph();
         myGraph.fillAdjacencyMap(n, e);
-
+        // testing clique finder
         int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
 
         final long endTest = System.currentTimeMillis(); // timing

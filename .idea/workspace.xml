@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AbstractIntegerCombinationIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AbstractLargestCliqueFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackwardIntCombinationIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ForwardIntCombinationIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project1-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project1-code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="163" column="58" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
+            <state relative-caret-position="277">
+              <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547467635616" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547473895323" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -247,7 +238,7 @@
       <workItem from="1547279713310" duration="2575000" />
       <workItem from="1547311306785" duration="8353000" />
       <workItem from="1547391681003" duration="8043000" />
-      <workItem from="1547452983013" duration="10178000" />
+      <workItem from="1547452983013" duration="11078000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -473,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547464034202</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="clique finder works, but is slow">
+      <created>1547467909073</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1547467909073</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116663000" />
+    <option name="totallyTimeSpent" value="117563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1119" y="0" width="1082" height="1201" extended-state="0" />
@@ -523,7 +521,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started method that assigns the color" />
     <MESSAGE value="completed color assignment and helper method DSATUR" />
     <MESSAGE value="all DSATUR helper methods tested and started assembling" />
     <MESSAGE value="select vertex DSATUR added" />
@@ -548,7 +545,8 @@
     <MESSAGE value="debugging cycle detection" />
     <MESSAGE value="creating adjacencylist method" />
     <MESSAGE value="tested graph class" />
-    <option name="LAST_COMMIT_MESSAGE" value="tested graph class" />
+    <MESSAGE value="clique finder works, but is slow" />
+    <option name="LAST_COMMIT_MESSAGE" value="clique finder works, but is slow" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -687,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="163" column="58" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
+        <state relative-caret-position="277">
+          <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
