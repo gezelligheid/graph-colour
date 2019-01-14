@@ -110,7 +110,7 @@ public class ChromaticMethods {
 
     public static void maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {
         while (!candidates.isEmpty()) {
-
+            break;
         }
 
     }

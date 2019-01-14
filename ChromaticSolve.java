@@ -125,7 +125,6 @@ public class ChromaticSolve {
 //        Matrix matrix =
 
 
-
         System.out.println("--");
         //testing the dsatur algo
 //        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
@@ -157,18 +156,24 @@ public class ChromaticSolve {
 //        if (hasOddCycle) System.out.println("odd cycle found");
 //        else System.out.println("no odd cycle found");
 //        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
-        // testing linkedlist
-        LinkedList[] adjacencyList = ChromaticMethods.makeAdjacencyList(n,e);
+
+        // testing graph class
+        Graph myGraph = new Graph();
+        myGraph.fillAdjacencyMap(n, e);
+
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");
-//        degs[3] = 4;
-        System.out.println(Arrays.toString(adjacencyList));
+        System.out.println("size: " + myGraph.getSize());
+        System.out.println("firstVertex (1):  " + myGraph.adjacencyMap.get(1));
+
         // testing vertex list
-        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
-        System.out.println(vertexList);
+//        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
+//        System.out.println(vertexList);
+
         // test print degree array
 //        System.out.println("deg list: " + Arrays.toString(degrees));
-//        // testing the indexofmax method
+
+        // testing the indexofmax method
 //        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
 //        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
 //
