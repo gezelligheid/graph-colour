@@ -120,7 +120,7 @@ public class ChromaticSolve {
         final long startTime = System.currentTimeMillis(); // timing
         // calling the adjacencymatrix creator
 
-//        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
+        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
 //        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
 //        Matrix matrix =
 
@@ -161,7 +161,7 @@ public class ChromaticSolve {
         Graph myGraph = new Graph();
         myGraph.fillAdjacencyMap(n, e);
         // testing clique finder
-        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+        int[] clique = new  DenseGraphLargestCliqueFinder().computeLargestClique(myGraph);
 
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");

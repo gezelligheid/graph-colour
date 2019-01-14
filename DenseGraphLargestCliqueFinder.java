@@ -24,6 +24,7 @@ public class DenseGraphLargestCliqueFinder extends AbstractLargestCliqueFinder {
 
         while (iterator.loadNextCombination(clique)) {
             if (isClique(graph, clique)) {
+                System.out.println("clique size found: " + clique.size());
                 break;
             }
         }

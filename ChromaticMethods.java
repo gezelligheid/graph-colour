@@ -24,7 +24,7 @@ public class ChromaticMethods {
         return adjacencyList;
     }
 
-    public static LinkedList<Integer> makeSimpleVerticesList(int vertices){
+    public static LinkedList<Integer> makeSimpleVerticesList(int vertices) {
         LinkedList<Integer> verticesList = new LinkedList<>();
         for (int i = 0; i < vertices; i++) {
             verticesList.add(i);
@@ -69,6 +69,8 @@ public class ChromaticMethods {
     /**
      * to detect odd cycles
      * the starting vertex must have degree > 0 else it will give a false negative
+     * <p>
+     * inspired by:
      *
      * @param adjacencyMatrix the graph
      * @param vertices        mumber of vertices of the graph
@@ -96,7 +98,8 @@ public class ChromaticMethods {
                 if (adjacencyMatrix[toCheck][i] && colorArray[i] == -1) {
                     // the alternate color is assigned to this vertex
                     colorArray[i] = 1 - colorArray[toCheck];
-                    System.out.println((1 - colorArray[toCheck]) + " assigned to vertex index " + i);
+                    if (ChromaticSolve.DEBUG)
+                        System.out.println((1 - colorArray[toCheck]) + " assigned to vertex index " + i);
                     queue.push(i);
                 }
                 // otherwise an edge exists and the same color is used
