@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/someResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/someResults.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2873">
-              <caret line="169" selection-start-line="169" selection-end-line="169" />
+            <state relative-caret-position="632">
+              <caret line="160" column="38" lean-forward="true" selection-start-line="160" selection-start-column="38" selection-end-line="164" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+            <state relative-caret-position="561">
+              <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -57,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
@@ -148,24 +150,23 @@
         <option value="$PROJECT_DIR$/BackwardIntCombinationIterator.java" />
         <option value="$PROJECT_DIR$/AbstractIntegerCombinationIterator.java" />
         <option value="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" />
-        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
         <option value="$PROJECT_DIR$/AbstractLargestCliqueFinder.java" />
         <option value="$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java" />
+        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
         <option value="$PROJECT_DIR$/ChromaticMethods.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1909" />
-    <option name="width" value="1943" />
-    <option name="height" value="2102" />
+    <option name="x" value="1907" />
+    <option name="width" value="1945" />
+    <option name="height" value="2104" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,6 +184,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,6 +253,7 @@
       <workItem from="1547391681003" duration="8043000" />
       <workItem from="1547452983013" duration="14493000" />
       <workItem from="1547537821411" duration="3380000" />
+      <workItem from="1547626009544" duration="822000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -501,13 +504,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124358000" />
+    <option name="totallyTimeSpent" value="125180000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1091" y="0" width="1110" height="1201" extended-state="0" />
+    <frame x="1090" y="0" width="1111" height="1202" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.121673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12345679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -661,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForwardIntCombinationIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackwardIntCombinationIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -675,22 +671,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
+    <entry file="file://$PROJECT_DIR$/ForwardIntCombinationIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+        <state relative-caret-position="632">
+          <caret line="160" column="38" lean-forward="true" selection-start-line="160" selection-start-column="38" selection-end-line="164" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -701,6 +693,17 @@
         <state relative-caret-position="595">
           <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

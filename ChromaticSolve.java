@@ -152,21 +152,21 @@ public class ChromaticSolve {
 //
         final long startTest = System.currentTimeMillis(); // timing
         // testing the odd cycle
-//        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
-//        if (hasOddCycle) System.out.println("odd cycle found");
-//        else System.out.println("no odd cycle found");
-//        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
+        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
+        if (hasOddCycle) System.out.println("odd cycle found");
+        else System.out.println("no odd cycle found");
+        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
 
         // testing graph class
-        Graph myGraph = new Graph();
-        myGraph.fillAdjacencyMap(n, e);
-        // testing clique finder
-        int[] clique = new  DenseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+//        Graph myGraph = new Graph();
+//        myGraph.fillAdjacencyMap(n, e);
+//        // testing clique finder
+//        int[] clique = new  DenseGraphLargestCliqueFinder().computeLargestClique(myGraph);
 
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");
 
-        System.out.println(Arrays.toString(clique));
+//        System.out.println(Arrays.toString(clique));
 
         // testing vertex list
 //        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);

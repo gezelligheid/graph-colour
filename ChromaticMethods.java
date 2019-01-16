@@ -87,14 +87,19 @@ public class ChromaticMethods {
         // keep track of all vertices so that all components are searched
         LinkedList allVertices = makeSimpleVerticesList(vertices);
         // create a queue of vertex numbers abd add the starting vertex
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        LinkedList<Integer> queue = new LinkedList<>();
         queue.add(start);
+        allVertices.removeFirstOccurrence(start);
 
         while (!allVertices.isEmpty()) {
+            if (queue.isEmpty()){
+                queue.add((Integer) allVertices.get(0));
+                allVertices.remove(0);
+            }
             while (!queue.isEmpty()) {
                 // take a vertex from the queue
                 int toCheck = queue.peek();
-                System.out.println("vertex to check is: " + toCheck);
+//                System.out.println("vertex to check is: " + toCheck);
                 queue.pop();
 
                 // find non colored adjacent vertices
