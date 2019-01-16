@@ -68,7 +68,7 @@ public class ChromaticMethods {
 
     /**
      * to detect odd cycles
-     * the starting vertex must have degree > 0 else it will give a false negative
+     * the starting vertex preferably chosen in a connected part for extra speed
      * <p>
      * <p>
      * inspired by: https://www.geeksforgeeks.org/check-graphs-cycle-odd-length/
