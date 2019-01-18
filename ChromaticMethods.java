@@ -9,8 +9,6 @@ import static java.util.stream.Collectors.toMap;
 
 public class ChromaticMethods {
 
-    public static LinkedList<Integer> currentClique = new LinkedList<>(); // contains the clique being created
-    public static LinkedList<Integer> MaxClique = new LinkedList<>(); // contains the largest clique seen
 
     public static LinkedList<Integer>[] makeAdjacencyList(int vertices, ColEdge[] edges) {
         LinkedList<Integer>[] adjacencyList = new LinkedList[vertices];
@@ -20,6 +18,18 @@ public class ChromaticMethods {
         for (ColEdge edge : edges) {
             adjacencyList[edge.v - 1].push(edge.u - 1);
             adjacencyList[edge.u - 1].push(edge.v - 1);
+        }
+        return adjacencyList;
+    }
+
+    public static ArrayList<Integer>[] makeAdjacencyArrayList(int vertices, ColEdge[] edges) {
+        ArrayList<Integer>[] adjacencyList = new ArrayList[vertices];
+        for (int i = 0; i < vertices; i++) {
+            adjacencyList[i] = new ArrayList<>();
+        }
+        for (ColEdge edge : edges) {
+            adjacencyList[edge.v - 1].add(edge.u - 1);
+            adjacencyList[edge.u - 1].add(edge.v - 1);
         }
         return adjacencyList;
     }
@@ -92,7 +102,7 @@ public class ChromaticMethods {
         allVertices.removeFirstOccurrence(start);
 
         while (!allVertices.isEmpty()) {
-            if (queue.isEmpty()){
+            if (queue.isEmpty()) {
                 queue.add((Integer) allVertices.get(0));
                 allVertices.remove(0);
             }
@@ -120,6 +130,48 @@ public class ChromaticMethods {
         }
         // the graph is two colorable
         return false;
+    }
+
+    public static LinkedList<LinkedList<Integer>> colorRecursiveLargestFirst(ArrayList<Integer>[] adjacencyArrayList,
+                                                                             LinkedList<LinkedList<Integer>> solution,
+                                                                             LinkedList<Integer> candidates,
+                                                                             LinkedList<Integer> excluded,
+                                                                             LinkedList<Integer> alreadyColored)
+
+    {
+        if (candidates.isEmpty()) return solution;
+
+        while (!candidates.isEmpty()) {
+            // create and add new color class at the end of the list of classes
+            LinkedList<Integer> currentColorClass = new LinkedList<>();
+            while (!candidates.isEmpty()) {
+                // choose vertex with max degree in candidates
+                int vertexChoice = candidates.peekFirst();
+                int vertexChoiceDegree = adjacencyArrayList[vertexChoice].size();
+                for (int i = 1; i < candidates.size(); i++) {
+                    if (adjacencyArrayList[candidates.get(i)].size() > vertexChoiceDegree) {
+                        vertexChoice = candidates.get(i);
+                        vertexChoiceDegree = adjacencyArrayList[vertexChoice].size();
+                    }
+                }
+                // put vertex in its color set
+                currentColorClass.add(vertexChoice);
+                alreadyColored.add(vertexChoice);
+                // remove colored vertex from candidates
+                candidates.removeFirstOccurrence(vertexChoice);
+                // add adjacent vertices to the exclusion set and remove from candidates
+                for (int i = 0; i < adjacencyArrayList[vertexChoice].size(); i++) {
+                    int workingVertex = adjacencyArrayList[vertexChoice].get(i);
+                    if (!excluded.contains(workingVertex) && !alreadyColored.contains(workingVertex))
+                        excluded.add(workingVertex); // uncolored vertices that can not be colored with same color
+                    candidates.removeFirstOccurrence(workingVertex);
+                }
+            }
+            solution.add(currentColorClass);
+            candidates = (LinkedList<Integer>) excluded.clone();
+            excluded.clear();
+        }
+        return colorRecursiveLargestFirst(adjacencyArrayList, solution, candidates, excluded, alreadyColored);
     }
 
     public static void maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {

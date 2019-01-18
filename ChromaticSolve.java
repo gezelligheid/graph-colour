@@ -120,9 +120,14 @@ public class ChromaticSolve {
         final long startTime = System.currentTimeMillis(); // timing
         // calling the adjacencymatrix creator
 
-        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
+//        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
 //        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
-//        Matrix matrix =
+        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
+        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
+        LinkedList<Integer> candidates = simpleVerticeslist;
+        LinkedList<Integer> excluded = new LinkedList<>();
+        LinkedList<Integer> coloredVertices = new LinkedList<>();
+        LinkedList<LinkedList<Integer>> solutionSet = new LinkedList<>();
 
 
         System.out.println("--");
@@ -132,6 +137,9 @@ public class ChromaticSolve {
 //        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
 //        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
+        // testing RLF
+        LinkedList<LinkedList<Integer>> solution = ChromaticMethods.colorRecursiveLargestFirst(adjacencyArrayList,
+                solutionSet,candidates,excluded, coloredVertices);
 
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(adjacencyMatrix);
@@ -158,19 +166,20 @@ public class ChromaticSolve {
 //        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
 
         // testing graph class
-        Graph myGraph = new Graph();
-        myGraph.fillAdjacencyMap(n, e);
-        // testing clique finder
-        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+//        Graph myGraph = new Graph();
+//        myGraph.fillAdjacencyMap(n, e);
+//        // testing clique finder
+//        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
 
         final long endTest = System.currentTimeMillis(); // timing
         System.out.println("testTime: " + (endTest - startTest) + " ms");
 
-        System.out.println(Arrays.toString(clique));
+//        System.out.println(Arrays.toString(clique));
 
         // testing vertex list
 //        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
-//        System.out.println(vertexList);
+        System.out.println(solution);
+        System.out.println("colors used: " + solution.size());
 
         // test print degree array
 //        System.out.println("deg list: " + Arrays.toString(degrees));
