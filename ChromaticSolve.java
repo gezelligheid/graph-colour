@@ -1,7 +1,4 @@
 import java.io.*;
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.lang.Math;
 
 class ColEdge {
     int u;
@@ -120,26 +117,27 @@ public class ChromaticSolve {
         final long startTime = System.currentTimeMillis(); // timing
         // calling the adjacencymatrix creator
 
-//        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
-//        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
-        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
-        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
-        LinkedList<Integer> candidates = simpleVerticeslist;
-        LinkedList<Integer> excluded = new LinkedList<>();
-        LinkedList<Integer> coloredVertices = new LinkedList<>();
-        LinkedList<LinkedList<Integer>> solutionSet = new LinkedList<>();
+        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
+        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
+//        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
+//        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
+//        LinkedList<Integer> candidates = simpleVerticeslist;
+//        LinkedList<Integer> excluded = new LinkedList<>();
+//        LinkedList<Integer> coloredVertices = new LinkedList<>();
+//        LinkedList<LinkedList<Integer>> solutionSet = new LinkedList<>();
 
 
         System.out.println("--");
         //testing the dsatur algo
-//        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
 //        System.out.println(Arrays.toString(coloring));
-//        System.out.println("colors used: " + coloring[ChromaticMethods.indexOfMax(coloring)]);
+        int upperBound = coloring[ChromaticMethods.indexOfMax(coloring)];
+        System.out.println("colors used: " + upperBound);
 //        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
         // testing RLF
-        LinkedList<LinkedList<Integer>> solution = ChromaticMethods.colorRecursiveLargestFirst(adjacencyArrayList,
-                solutionSet,candidates,excluded, coloredVertices);
+//        LinkedList<LinkedList<Integer>> solution = ChromaticMethods.colorRecursiveLargestFirst(adjacencyArrayList,
+//                solutionSet,candidates,excluded, coloredVertices);
 
         // print the matrix to test
         //GenerateRandomGraph.matrix2DPrint(adjacencyMatrix);
@@ -159,6 +157,17 @@ public class ChromaticSolve {
 //        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 //
         final long startTest = System.currentTimeMillis(); // timing
+        // testing backtracking exactness
+
+        boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
+        while (possible){
+            upperBound--; // reduce upper bound and check again
+            possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
+            System.out.println("possible coloring with " + upperBound + " colors is " + possible);
+            if (!possible) upperBound++;
+        }
+        System.out.println("the exact chromatic number is: " + upperBound);
+
         // testing the odd cycle
 //        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
 //        if (hasOddCycle) System.out.println("odd cycle found");
@@ -178,8 +187,8 @@ public class ChromaticSolve {
 
         // testing vertex list
 //        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
-        System.out.println(solution);
-        System.out.println("colors used: " + solution.size());
+//        System.out.println(solution);
+//        System.out.println("colors used: " + solution.size());
 
         // test print degree array
 //        System.out.println("deg list: " + Arrays.toString(degrees));

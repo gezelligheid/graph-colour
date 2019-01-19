@@ -3,6 +3,12 @@ import java.util.*;
 /**
  * Class to hold data about an undirected graph.
  * The purpose is to make the data more flexible, easier to modify and access efficiently
+ *
+ * modified from https://codereview.stackexchange.com/questions/171029/finding-largest-graph-cliques-in-java
+ * to fit the date structure of this program.
+ *
+ * @author Rodion "rodde" Efremov
+ * @author Alain van Rijn
  */
 public class Graph {
 
