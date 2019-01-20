@@ -1,4 +1,7 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 class ColEdge {
     int u;
@@ -119,7 +122,18 @@ public class ChromaticSolve {
 
         boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
         int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
-//        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
+        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
+        //testing isolated nodes and cut vertices
+        int isolated = 0;
+        int cutVertices = 0;
+        for (int i = 0; i < adjacencyArrayList.length; i++) {
+            if (adjacencyArrayList[i].size() == 0) isolated++;
+            if (adjacencyArrayList[i].size() == 1) cutVertices++;
+
+        }
+        System.out.println(isolated + " of " + n + " are isolated");
+        System.out.println(cutVertices + " of " + n + " are cut vertices");
+        System.out.println("the size of the graph is: " + e.length);
 //        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
 //        LinkedList<Integer> candidates = simpleVerticeslist;
 //        LinkedList<Integer> excluded = new LinkedList<>();
@@ -129,10 +143,10 @@ public class ChromaticSolve {
 
         System.out.println("--");
         //testing the dsatur algo
-        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
-//        System.out.println(Arrays.toString(coloring));
-        int upperBound = coloring[ChromaticMethods.indexOfMax(coloring)];
-        System.out.println("colors used: " + upperBound);
+//        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+////        System.out.println(Arrays.toString(coloring));
+//        int upperBound = coloring[ChromaticMethods.indexOfMax(coloring)];
+//        System.out.println("colors used: " + upperBound);
 //        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
 
         // testing RLF
@@ -159,14 +173,14 @@ public class ChromaticSolve {
         final long startTest = System.currentTimeMillis(); // timing
         // testing backtracking exactness
 
-        boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
-        while (possible){
-            upperBound--; // reduce upper bound and check again
-            possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
-            System.out.println("possible coloring with " + upperBound + " colors is " + possible);
-            if (!possible) upperBound++;
-        }
-        System.out.println("the exact chromatic number is: " + upperBound);
+//        boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
+//        while (possible){
+//            upperBound--; // reduce upper bound and check again
+//            possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
+//            System.out.println("possible coloring with " + upperBound + " colors is " + possible);
+//            if (!possible) upperBound++;
+//        }
+//        System.out.println("the exact chromatic number is: " + upperBound);
 
         // testing the odd cycle
 //        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);

@@ -501,7 +501,12 @@ public class ChromaticMethods {
      * A recursive utility function to solve m
      * coloring  problem
      *
+     * @param colorList current coloring
+     * @param vertex the vertex to consider
+     * @param graph the adjacency matrix
+     * @param upperBound the number of colors tried to use
      * @author Abhishek Shankhadhar
+     * @author Alain van Rijn
      */
     static boolean graphColoringUtil(int[][] graph, int upperBound,
                                      int[] colorList, int vertex) {
@@ -539,18 +544,15 @@ public class ChromaticMethods {
      * This function solves the m Coloring problem using
      * Backtracking. It mainly uses graphColoringUtil()
      * to solve the problem. It returns false if the m
-     * colors cannot be assigned, otherwise return true
-     * and  prints assignments of colors to all vertices.
+     * colors cannot be assigned, otherwise return true.
      * Please note that there  may be more than one
-     * solutions, this function prints one of the
-     * feasible solutions.
+     * solutions.
      * <p>
      * based on: https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
      *
      * @param upperBound best upper bound so far
      * @param vertices order of the graph
      * @param graph the adjacency matrix
-     * @param colorList the current colors in use
      * @return whether a graph is colorable for the upper bound provided
      * @author Abhishek Shankhadhar
      * @author Alain van Rijn

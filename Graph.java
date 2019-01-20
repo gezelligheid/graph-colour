@@ -47,9 +47,7 @@ public class Graph {
             edgeMake(edge.u - 1, edge.v - 1);
         }
         // add the remaining vertices that don't show up in any edge
-        for (int i = 0; i < vertices; i++) {
-            addVertex(i);
-        }
+
     }
 
     /**
