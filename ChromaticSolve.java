@@ -190,7 +190,7 @@ public class ChromaticSolve {
                 } catch (ExecutionException e1) {
                     e1.printStackTrace();
                 } catch (TimeoutException e1) {
-                    System.out.println("20 seconds elapsed");
+                    e1.printStackTrace();
                 }
 
                 try {
