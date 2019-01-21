@@ -7,15 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/project1_code_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/project1_code_jar2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/someResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/someResults.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/GUI.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/out/production/GUI/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/out/production/GUI/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/out/production/GUI/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/GraphGeneration.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/out/production/GraphGeneration/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGeneration/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualiser.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +68,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="-2788">
+                  <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/BruteForce.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -190,8 +224,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1858" />
-    <option name="width" value="1992" />
+    <option name="x" value="1473" />
+    <option name="width" value="2377" />
     <option name="height" value="2102" />
   </component>
   <component name="ProjectView">
@@ -222,7 +256,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548099175469" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548099600990" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -290,7 +324,7 @@
       <workItem from="1547707273457" duration="443000" />
       <workItem from="1547794340213" duration="27553000" />
       <workItem from="1547906383519" duration="11249000" />
-      <workItem from="1548053385038" duration="22702000" />
+      <workItem from="1548053385038" duration="23524000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -586,17 +620,23 @@
       <option name="project" value="LOCAL" />
       <updated>1548091814158</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="program ready for tournament">
+      <created>1548099408992</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1548099408993</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189811000" />
+    <option name="totallyTimeSpent" value="190633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1062" y="0" width="1138" height="1201" extended-state="0" />
-    <editor active="true" />
+    <frame x="842" y="0" width="1358" height="1201" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25185186" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20923077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -636,7 +676,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uncolored and not adjacent set creator works" />
     <MESSAGE value="some testing and tweaking" />
     <MESSAGE value="sorted map of degree ready for testing" />
     <MESSAGE value="some tweaking with welsh powell" />
@@ -661,7 +700,8 @@
     <MESSAGE value="finished simple backtracking algorithm" />
     <MESSAGE value="mostly fixed thread issue" />
     <MESSAGE value="removed redundant print" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed redundant print" />
+    <MESSAGE value="program ready for tournament" />
+    <option name="LAST_COMMIT_MESSAGE" value="program ready for tournament" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java">
@@ -678,25 +718,9 @@
     <entry file="file://$PROJECT_DIR$/ReadGraph.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="36" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-583">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Visualiser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -789,13 +813,39 @@
     <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Visualiser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="36" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-2788">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BruteForce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
