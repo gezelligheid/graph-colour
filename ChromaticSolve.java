@@ -45,8 +45,6 @@ public class ChromaticSolve {
     public static int[] coloring;
 
     public static void main(String[] args) {
-        final long startTime = System.currentTimeMillis();
-        long end1 = startTime + 19000;
         if (args.length < 1) {
             System.out.println("Error! No filename specified.");
             System.exit(0);
@@ -184,12 +182,10 @@ public class ChromaticSolve {
                 Future<Integer> backtrack = service.submit(new Task2());
 
                 try {
-                    chromaticNumber = backtrack.get(20, TimeUnit.SECONDS);
+                    chromaticNumber = backtrack.get();
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 } catch (ExecutionException e1) {
-                    e1.printStackTrace();
-                } catch (TimeoutException e1) {
                     e1.printStackTrace();
                 }
 
