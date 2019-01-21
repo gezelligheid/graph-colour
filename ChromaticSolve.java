@@ -8,9 +8,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 class ColEdge {
     int u;
@@ -23,6 +21,28 @@ public class ChromaticSolve {
     public final static boolean DEBUG = false;
 
     public final static String COMMENT = "//";
+
+    public static Graph myGraph;
+
+    public static boolean[][] adjacencyMatrix;
+
+    public static int[][] adjacencyIntegerMatrix;
+
+    public static double density;
+
+    public static int gellerLowerBound;
+
+    public static int vertices;
+
+    public static final String upperPrint = "NEW BEST UPPER BOUND = ";
+    public static final String lowerPrint = "NEW BEST LOWER BOUND = ";
+    public static final String exactPrint = "CHROMATIC NUMBER = ";
+
+    public static int upperBound;
+    public static int lowerBound;
+    public static int chromaticNumber;
+
+    public static int[] coloring;
 
     public static void main(String[] args) {
         final long startTime = System.currentTimeMillis();
@@ -126,17 +146,17 @@ public class ChromaticSolve {
         //! INSERT YOUR CODE HERE!
 
         // some variables
-        boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
-        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n, e);
+        adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
+        adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n, e);
 //        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
-        final double density = (m / (n * (n - 1) / 2));
-        final int gellerLowerBound = (int) (Math.pow(n, 2) / (Math.pow(n, 2) - 2 * m));
+        density = (m / (n * (n - 1) / 2));
+        gellerLowerBound = (int) (Math.pow(n, 2) / (Math.pow(n, 2) - 2 * m));
+        myGraph = new Graph();
+        myGraph.fillAdjacencyMap(n, e);
+        vertices = n;
 
 
         // tournament strings
-        final String upperPrint = "NEW BEST UPPER BOUND = ";
-        final String lowerPrint = "NEW BEST LOWER BOUND = ";
-        final String exactPrint = "CHROMATIC NUMBER = ";
 
 
 //        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
@@ -151,37 +171,37 @@ public class ChromaticSolve {
         else if (!ChromaticMethods.hasOddCycle(adjacencyMatrix, n, e[0].u - 1))
             System.out.println(exactPrint + 2);
         else {
-            int lowerBound = Math.max(3, gellerLowerBound);
+            lowerBound = Math.max(3, gellerLowerBound);
             System.out.println(lowerPrint + lowerBound);
-            int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
-            int upperBound = ChromaticMethods.maxIntValueOfArray(coloring);
+
+            coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+            upperBound = ChromaticMethods.maxIntValueOfArray(coloring);
             System.out.println(upperPrint + upperBound);
-            Graph myGraph = new Graph(); // create structure for clique finding
-            myGraph.fillAdjacencyMap(n, e);
-            boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
+
             while (upperBound != lowerBound) {
+                ExecutorService service = Executors.newFixedThreadPool(2);
+                Future<Integer> future = service.submit(new Task1());
+                Future<Integer> backtrack = service.submit(new Task2());
 
-            }
-
-            while (possible) {
-                Thread thread1 = new Thread() {
-                    public void run() {
-                        int[] clique = new SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
-                        lowerBound = clique.length;
-                    }
-
-                };
-                upperBound--; // reduce upper bound and check again
-                possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
-                if (possible)
-                    System.out.println(upperPrint + upperBound);
-                else {
-                    upperBound++;
-                    System.out.println(exactPrint + upperBound);
+                try {
+                    chromaticNumber = backtrack.get(20, TimeUnit.SECONDS);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                } catch (ExecutionException e1) {
+                    e1.printStackTrace();
+                } catch (TimeoutException e1) {
+                    System.out.println("20 seconds elapsed");
                 }
 
-
+                try {
+                    lowerBound = future.get();
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                } catch (ExecutionException e1) {
+                    e1.printStackTrace();
+                }
             }
+
 
         }
 
@@ -266,9 +286,30 @@ public class ChromaticSolve {
 
     }
 
-    static class Task implements Runnable {
-        public void run() {
+    static class Task1 implements Callable<Integer> {
+        @Override
+        public Integer call() throws Exception {
+            int[] clique = new SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+            return clique.length;
+        }
+    }
 
+    static class Task2 implements Callable<Integer> {
+        @Override
+        public Integer call() throws Exception {
+            boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
+            while (possible) {
+                // reduce upper bound and check again
+                possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound - 1, vertices);
+                if (possible) {
+                    upperBound--;
+                    System.out.println(upperPrint + upperBound);
+                } else {
+                    System.out.println(exactPrint + upperBound);
+                    break;
+                }
+            }
+            return chromaticNumber;
         }
     }
 
