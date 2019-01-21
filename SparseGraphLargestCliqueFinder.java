@@ -33,7 +33,8 @@ public final class SparseGraphLargestCliqueFinder
             if (isClique(graph, clique) && bestClique.size() < clique.size()) {
                 bestClique.clear();
                 bestClique.addAll(clique);
-                System.out.println(clique);
+                if (clique.size() > 4)
+                    System.out.println("NEW BEST LOWER BOUND = " + clique.size());
             }
         }
 

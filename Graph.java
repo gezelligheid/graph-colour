@@ -46,7 +46,6 @@ public class Graph {
         for (ColEdge edge : edges) {
             edgeMake(edge.u - 1, edge.v - 1);
         }
-        // add the remaining vertices that don't show up in any edge
 
     }
 

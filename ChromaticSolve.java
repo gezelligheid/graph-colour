@@ -1,7 +1,16 @@
+/**
+ * contains logic to read in and find or else approximate the chromatic number of an undirected graph
+ *
+ * @author Steven Kelk
+ * @author Alain van Rijn
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class ColEdge {
     int u;
@@ -16,7 +25,8 @@ public class ChromaticSolve {
     public final static String COMMENT = "//";
 
     public static void main(String[] args) {
-        final long startReading = System.currentTimeMillis();
+        final long startTime = System.currentTimeMillis();
+        long end1 = startTime + 19000;
         if (args.length < 1) {
             System.out.println("Error! No filename specified.");
             System.exit(0);
@@ -114,36 +124,69 @@ public class ChromaticSolve {
         //! there will be n vertices in the graph, numbered 1 to n
 
         //! INSERT YOUR CODE HERE!
-        final long doneReading = System.currentTimeMillis(); // tracking reading time
-        System.out.println("Reading time: " + (doneReading - startReading) + " ms");
 
-        final long startTime = System.currentTimeMillis(); // timing
-        // calling the adjacencymatrix creator
-
+        // some variables
         boolean[][] adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
-        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n,e);
-        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
-        //testing isolated nodes and cut vertices
-        int isolated = 0;
-        int cutVertices = 0;
-        for (int i = 0; i < adjacencyArrayList.length; i++) {
-            if (adjacencyArrayList[i].size() == 0) isolated++;
-            if (adjacencyArrayList[i].size() == 1) cutVertices++;
+        int[][] adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n, e);
+//        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
+        final double density = (m / (n * (n - 1) / 2));
+        final int gellerLowerBound = (int) (Math.pow(n, 2) / (Math.pow(n, 2) - 2 * m));
 
-        }
-        System.out.println(isolated + " of " + n + " are isolated");
-        System.out.println(cutVertices + " of " + n + " are cut vertices");
-        System.out.println("the size of the graph is: " + e.length);
+
+        // tournament strings
+        final String upperPrint = "NEW BEST UPPER BOUND = ";
+        final String lowerPrint = "NEW BEST LOWER BOUND = ";
+        final String exactPrint = "CHROMATIC NUMBER = ";
+
+
 //        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
 //        LinkedList<Integer> candidates = simpleVerticeslist;
 //        LinkedList<Integer> excluded = new LinkedList<>();
 //        LinkedList<Integer> coloredVertices = new LinkedList<>();
 //        LinkedList<LinkedList<Integer>> solutionSet = new LinkedList<>();
 
+        // complete graphs have chromatic number equal to their number of vertices
+        if (Math.abs(density - 1) < 0.000000001)
+            System.out.println(exactPrint + n);
+        else if (!ChromaticMethods.hasOddCycle(adjacencyMatrix, n, e[0].u - 1))
+            System.out.println(exactPrint + 2);
+        else {
+            int lowerBound = Math.max(3, gellerLowerBound);
+            System.out.println(lowerPrint + lowerBound);
+            int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
+            int upperBound = ChromaticMethods.maxIntValueOfArray(coloring);
+            System.out.println(upperPrint + upperBound);
+            Graph myGraph = new Graph(); // create structure for clique finding
+            myGraph.fillAdjacencyMap(n, e);
+            boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
+            while (upperBound != lowerBound) {
 
-        System.out.println("--");
+            }
+
+            while (possible) {
+                Thread thread1 = new Thread() {
+                    public void run() {
+                        int[] clique = new SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
+                        lowerBound = clique.length;
+                    }
+
+                };
+                upperBound--; // reduce upper bound and check again
+                possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
+                if (possible)
+                    System.out.println(upperPrint + upperBound);
+                else {
+                    upperBound++;
+                    System.out.println(exactPrint + upperBound);
+                }
+
+
+            }
+
+        }
+
+
         //testing the dsatur algo
-//        int[] coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
 ////        System.out.println(Arrays.toString(coloring));
 //        int upperBound = coloring[ChromaticMethods.indexOfMax(coloring)];
 //        System.out.println("colors used: " + upperBound);
@@ -170,16 +213,10 @@ public class ChromaticSolve {
 //        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
 //        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
 //
-        final long startTest = System.currentTimeMillis(); // timing
+
         // testing backtracking exactness
 
-//        boolean possible = true; // the upper bound is always a solution knowing it's obtained correctly
-//        while (possible){
-//            upperBound--; // reduce upper bound and check again
-//            possible = ChromaticMethods.isMColorable(adjacencyIntegerMatrix, upperBound, n);
-//            System.out.println("possible coloring with " + upperBound + " colors is " + possible);
-//            if (!possible) upperBound++;
-//        }
+
 //        System.out.println("the exact chromatic number is: " + upperBound);
 
         // testing the odd cycle
@@ -189,13 +226,9 @@ public class ChromaticSolve {
 //        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
 
         // testing graph class
-//        Graph myGraph = new Graph();
-//        myGraph.fillAdjacencyMap(n, e);
 //        // testing clique finder
 //        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
 
-        final long endTest = System.currentTimeMillis(); // timing
-        System.out.println("testTime: " + (endTest - startTest) + " ms");
 
 //        System.out.println(Arrays.toString(clique));
 
@@ -229,9 +262,15 @@ public class ChromaticSolve {
 //        // testing the degree set making
 //        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
 //        // System.out.println(Arrays.toString(degSet));
-        final long endTime = System.currentTimeMillis();
 
-        System.out.println("Execution time: " + (endTime - startTime) + " ms");
+
     }
+
+    static class Task implements Runnable {
+        public void run() {
+
+        }
+    }
+
 
 }

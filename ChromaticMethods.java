@@ -1,6 +1,8 @@
 /**
  * class that contains ingredients for calculating the chromatic number of
  * undirected graphs
+ *
+ * @author Alain van Rijn
  */
 
 import java.util.*;
@@ -501,9 +503,9 @@ public class ChromaticMethods {
      * A recursive utility function to solve m
      * coloring  problem
      *
-     * @param colorList current coloring
-     * @param vertex the vertex to consider
-     * @param graph the adjacency matrix
+     * @param colorList  current coloring
+     * @param vertex     the vertex to consider
+     * @param graph      the adjacency matrix
      * @param upperBound the number of colors tried to use
      * @author Abhishek Shankhadhar
      * @author Alain van Rijn
@@ -551,8 +553,8 @@ public class ChromaticMethods {
      * based on: https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
      *
      * @param upperBound best upper bound so far
-     * @param vertices order of the graph
-     * @param graph the adjacency matrix
+     * @param vertices   order of the graph
+     * @param graph      the adjacency matrix
      * @return whether a graph is colorable for the upper bound provided
      * @author Abhishek Shankhadhar
      * @author Alain van Rijn
@@ -567,7 +569,7 @@ public class ChromaticMethods {
 
         // Call graphColoringUtil() for vertex 0
         if (!graphColoringUtil(graph, upperBound, colorArray, 0)) {
-            System.out.println("Solution does not exist");
+            // System.out.println("Solution does not exist");
             return false;
         }
 
@@ -593,4 +595,26 @@ public class ChromaticMethods {
         }
         System.out.println("conflicting vertices: " + conflicts);
     }
+
+    public static int maxIntValueOfArray(int[] array) {
+        int max = array[0];
+        for (int i1 : array) {
+            if (i1 > max) max = i1;
+        }
+        return max;
+    }
 }
+
+/*
+* // code for testing isolated nodes and cut vertices
+        int isolated = 0;
+        int cutVertices = 0;
+        for (int i = 0; i < adjacencyArrayList.length; i++) {
+            if (adjacencyArrayList[i].size() == 0) isolated++;
+            if (adjacencyArrayList[i].size() == 1) cutVertices++;
+
+        }
+        System.out.println(isolated + " of " + n + " are isolated");
+        System.out.println(cutVertices + " of " + n + " are cut vertices");
+        System.out.println("the size of the graph is: " + e.length);
+* */
