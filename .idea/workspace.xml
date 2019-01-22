@@ -10,83 +10,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="added documentation">
-      <change afterPath="$PROJECT_DIR$/documentation/AbstractIntegerCombinationIterator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/AbstractLargestCliqueFinder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/BackwardIntCombinationIterator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/ChromaticMethods.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/ChromaticSolve.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/DenseGraphLargestCliqueFinder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/ForwardIntCombinationIterator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/Graph.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/SparseGraphLargestCliqueFinder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/allclasses-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/allclasses-noframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/deprecated-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-1.10.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/member-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/resources/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/resources/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/type-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/type-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/project1_code_jar2/graph.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +35,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Graph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="636">
+                <state relative-caret-position="193">
                   <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
                   <folding>
                     <element signature="e#3308#3309#0" expanded="true" />
@@ -314,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548188089234" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548188898541" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -384,7 +309,7 @@
       <workItem from="1547906383519" duration="11249000" />
       <workItem from="1548053385038" duration="23524000" />
       <workItem from="1548139759529" duration="16483000" />
-      <workItem from="1548185774076" duration="2816000" />
+      <workItem from="1548185774076" duration="3108000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -708,14 +633,31 @@
       <option name="project" value="LOCAL" />
       <updated>1548172545267</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added documentation">
+      <created>1548188775288</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1548188775301</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209932000" />
+    <option name="totallyTimeSpent" value="210224000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="0" width="1360" height="1203" extended-state="0" />
+    <frame x="4" y="0" width="1360" height="1203" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21505377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -727,7 +669,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.26168224" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41511193" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41511193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -737,7 +679,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32961932" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.10354478" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.10354478" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.34953272" />
       <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -925,7 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
+        <state relative-caret-position="193">
           <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
           <folding>
             <element signature="e#3308#3309#0" expanded="true" />
