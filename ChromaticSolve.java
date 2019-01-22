@@ -150,7 +150,7 @@ public class ChromaticSolve {
         density = (m / (n * (n - 1) / 2));
         gellerLowerBound = (int) (Math.pow(n, 2) / (Math.pow(n, 2) - 2 * m));
         myGraph = new Graph();
-        myGraph.fillAdjacencyMap(n, e);
+        myGraph.fillAdjacencyMap(e);
         vertices = n;
 
 

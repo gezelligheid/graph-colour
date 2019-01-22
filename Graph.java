@@ -42,7 +42,10 @@ public class Graph {
         adjacencyMap.get(vertex2).add(vertex1);
     }
 
-    public void fillAdjacencyMap(int vertices, ColEdge[] edges) {
+    /**
+     * create an adjacency map that contains only vertices that appear in some edge
+     * */
+    public void fillAdjacencyMap(ColEdge[] edges) {
         for (ColEdge edge : edges) {
             edgeMake(edge.u - 1, edge.v - 1);
         }
