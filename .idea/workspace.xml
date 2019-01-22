@@ -7,26 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project1-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project1-code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackwardIntCombinationIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackwardIntCombinationIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve$Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve$Task1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve$Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve$Task2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForwardIntCombinationIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ForwardIntCombinationIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForwardIntCombinationIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ForwardIntCombinationIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenerateRandomGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateRandomGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/project1_code_jar2/Group22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/project1_code_jar2/Group22.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/someResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/someResults.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +32,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Graph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
+                <state relative-caret-position="527">
                   <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
                   <folding>
                     <element signature="e#3381#3382#0" expanded="true" />
@@ -258,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548164298530" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548165089017" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -327,7 +309,7 @@
       <workItem from="1547794340213" duration="27553000" />
       <workItem from="1547906383519" duration="11249000" />
       <workItem from="1548053385038" duration="23524000" />
-      <workItem from="1548139759529" duration="15557000" />
+      <workItem from="1548139759529" duration="16239000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -637,11 +619,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548141731714</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="created method to remove cut vertices(single degree endpoints) from the graph">
+      <created>1548164380816</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1548164380816</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206190000" />
+    <option name="totallyTimeSpent" value="206872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="0" width="1359" height="1202" extended-state="0" />
@@ -687,7 +676,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some testing and tweaking" />
     <MESSAGE value="sorted map of degree ready for testing" />
     <MESSAGE value="some tweaking with welsh powell" />
     <MESSAGE value="test setup" />
@@ -712,7 +700,8 @@
     <MESSAGE value="mostly fixed thread issue" />
     <MESSAGE value="removed redundant print" />
     <MESSAGE value="program ready for tournament" />
-    <option name="LAST_COMMIT_MESSAGE" value="program ready for tournament" />
+    <MESSAGE value="created method to remove cut vertices(single degree endpoints) from the graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="created method to remove cut vertices(single degree endpoints) from the graph" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java" />
@@ -826,7 +815,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
+        <state relative-caret-position="527">
           <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding>
             <element signature="e#3381#3382#0" expanded="true" />
