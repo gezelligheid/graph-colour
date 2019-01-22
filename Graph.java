@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Class to hold data about an undirected graph.
  * The purpose is to make the data more flexible, easier to modify and access efficiently
- *
+ * <p>
  * modified from https://codereview.stackexchange.com/questions/171029/finding-largest-graph-cliques-in-java
  * to fit the date structure of this program.
  *
@@ -15,7 +15,7 @@ public class Graph {
     /**
      * map interface chosen for it's easy acces, Set Interface prevents duplicate edges
      */
-    private final Map<Integer, Set<Integer>> adjacencyMap = new HashMap<>(); // holds information about the graph
+    private Map<Integer, Set<Integer>> adjacencyMap = new HashMap<>(); // holds information about the graph
 
     /**
      * if a vertex does not exist in the map.
@@ -44,12 +44,49 @@ public class Graph {
 
     /**
      * create an adjacency map that contains only vertices that appear in some edge
-     * */
+     */
     public void fillAdjacencyMap(ColEdge[] edges) {
         for (ColEdge edge : edges) {
             edgeMake(edge.u - 1, edge.v - 1);
         }
 
+    }
+
+    /**
+     * to allow more efficient clique finding, the vertices with only 1 edge are removed
+     */
+    public void removeCutVertices() {
+        boolean found;
+        LinkedList<Integer> isolated = new LinkedList<>();
+        do {
+            found = false;
+            for (Map.Entry<Integer, Set<Integer>> entry : adjacencyMap.entrySet()) {
+//                System.out.println("adjacency print key: " + entry.getKey() + "value: " +
+//                entry.getValue() + "set size: " + entry.getValue().size());
+                if (entry.getValue().size() == 1) {
+//                    System.out.println("found cut vertex");
+                    found = true; // loop yielded a cut vertex
+                    // get the only vertex in the set
+                    for (Integer integer : entry.getValue()) {
+//                        System.out.println("started set iterator" + integer);
+                        int removalSet = integer; // take the value of the set element
+                        // create a temp set
+                        Set<Integer> tempSet = adjacencyMap.get(removalSet);
+                        tempSet.remove(entry.getKey()); // remove the cut vertex from this set
+                        adjacencyMap.replace(removalSet, tempSet); // put the smaller set in place
+                    }
+                    isolated.add(entry.getKey());
+
+
+                }
+
+            }
+            // remove isolated vertices
+            for (Integer vert : isolated) {
+                adjacencyMap.remove(vert);
+            }
+            isolated.clear();
+        } while (found);
     }
 
     /**

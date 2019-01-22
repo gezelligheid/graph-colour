@@ -1,3 +1,8 @@
+/**
+ * used for generating and printing a randomly generated graph
+ *
+ * @author Alain van Rijn
+ * */
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GenerateRandomGraph {

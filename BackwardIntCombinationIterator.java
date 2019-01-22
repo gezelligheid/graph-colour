@@ -1,4 +1,11 @@
-
+/**
+ * Child class of the AbstractIntegerCombinationIterator that is used for a dense graph largest clique finder
+ * <p>
+ * most credits go to:
+ *
+ * @author Rodion "rodde" Efremov
+ * * @version 1.6 (Jul 24, 2017)
+ */
 public final class BackwardIntCombinationIterator
         extends AbstractIntegerCombinationIterator {
 
@@ -20,7 +27,7 @@ public final class BackwardIntCombinationIterator
 
         for (int i = currentCombinationSize - 2; i >= 0; --i) {
             if (indices[i] < indices[i + 1] - 1) {
-                indices[i] ++;
+                indices[i]++;
 
                 for (int j = i + 1; j < currentCombinationSize; ++j) {
                     indices[j] = indices[j - 1] + 1;

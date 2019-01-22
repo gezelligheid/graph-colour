@@ -14,6 +14,12 @@ import java.util.Objects;
 public final class SparseGraphLargestCliqueFinder
         extends AbstractLargestCliqueFinder {
 
+    /**
+     * as apposed to the dense graph finder, every new largest clique is the largest so far
+     * therefore it makes sense to record this intermittently in some way
+     *
+     * @param graph the graph to analyze
+     * @return the best clique when now larger clique is possible*/
     @Override
     public int[] computeLargestClique(Graph graph) {
         Objects.requireNonNull(graph, "The input graph is null.");
@@ -33,7 +39,7 @@ public final class SparseGraphLargestCliqueFinder
             if (isClique(graph, clique) && bestClique.size() < clique.size()) {
                 bestClique.clear();
                 bestClique.addAll(clique);
-                if (clique.size() > 4)
+                if (clique.size() > 3)
                     System.out.println("NEW BEST LOWER BOUND = " + clique.size());
             }
         }

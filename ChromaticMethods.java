@@ -184,12 +184,7 @@ public class ChromaticMethods {
         return colorRecursiveLargestFirst(adjacencyArrayList, solution, candidates, excluded, alreadyColored);
     }
 
-    public static void maximumClique(LinkedList<Integer> candidates, LinkedList<Integer> colorList) {
-        while (!candidates.isEmpty()) {
-            break;
-        }
 
-    }
 
     /**
      * provides a graph coloring based on the degree of saturation algorithm
@@ -418,6 +413,14 @@ public class ChromaticMethods {
         return adjColors;
     }
 
+    /**
+     * Creates an ArrayList containing all vertex indices if vertices that are uncolored and not adjacent to the
+     * vertex specified
+     *
+     * @param adjacencyMatrix the graph
+     * @param colorList the current coloring
+     * @param vertex the vertex for which the set is compiled
+     * @return  the set described above*/
     public static ArrayList<Integer> uncoloredNotAdjacentSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         ArrayList<Integer> set = new ArrayList<>(); // set to contain indices of uncolored non adjacent vertices
         for (int i = 0; i < colorList.length; i++) {
@@ -462,6 +465,7 @@ public class ChromaticMethods {
      * @param adjacencyMatrix the graph
      * @param colorList       current coloring
      * @param vertex          to color
+     * @return the color to use for coloring
      */
     public static int assignColorDSATUR(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         int activeColor = 1; // default color
@@ -596,6 +600,10 @@ public class ChromaticMethods {
         System.out.println("conflicting vertices: " + conflicts);
     }
 
+    /**
+     * @param array the array to analyze
+     * @return highest integer value in the array
+     * */
     public static int maxIntValueOfArray(int[] array) {
         int max = array[0];
         for (int i1 : array) {

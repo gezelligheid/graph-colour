@@ -151,12 +151,17 @@ public class ChromaticSolve {
         gellerLowerBound = (int) (Math.pow(n, 2) / (Math.pow(n, 2) - 2 * m));
         myGraph = new Graph();
         myGraph.fillAdjacencyMap(e);
+        System.out.println("graph size: " + myGraph.getSize());
+
+        myGraph.removeCutVertices();
+        System.out.println("graph size: " + myGraph.getSize());
         vertices = n;
 
 
         // tournament strings
 
 
+        //RLF Inputs
 //        final LinkedList<Integer> simpleVerticeslist = ChromaticMethods.makeSimpleVerticesList(n);
 //        LinkedList<Integer> candidates = simpleVerticeslist;
 //        LinkedList<Integer> excluded = new LinkedList<>();
@@ -202,82 +207,13 @@ public class ChromaticSolve {
         }
 
 
-        //testing the dsatur algo
-////        System.out.println(Arrays.toString(coloring));
-//        int upperBound = coloring[ChromaticMethods.indexOfMax(coloring)];
-//        System.out.println("colors used: " + upperBound);
-//        ChromaticMethods.showConflicts(adjacencyMatrix, coloring);
+
 
         // testing RLF
 //        LinkedList<LinkedList<Integer>> solution = ChromaticMethods.colorRecursiveLargestFirst(adjacencyArrayList,
 //                solutionSet,candidates,excluded, coloredVertices);
 
-        // print the matrix to test
-        //GenerateRandomGraph.matrix2DPrint(adjacencyMatrix);
 
-
-        // testing the sorted degree map
-
-//        Map<Integer,Integer> testMap = ChromaticMethods.unSortedHashDegreeSet(a);
-//        System.out.println(testMap);
-//        // testing single vertex saturation method
-//        int[] fakeColorlist = {1, 0, 3, 0, 0, 0};
-//        testing uncolored non adjacent method
-//        ArrayList<Integer> uncoloredNonAdjacent = ChromaticMethods.uncoloredNotAdjacentSet(a,fakeColorlist,0);
-//        System.out.println(uncoloredNonAdjacent);
-//        // System.out.println("saturation test for vertex index 0: " + ChromaticMethods.singleVertexSaturation(a, fakeColorlist, 0));
-//        int[] fakeSaturationlist = ChromaticMethods.uncoloredSaturations(a, fakeColorlist);
-//        System.out.println("uncoloered saturation list: " + Arrays.toString(fakeSaturationlist));
-//
-
-        // testing backtracking exactness
-
-
-//        System.out.println("the exact chromatic number is: " + upperBound);
-
-        // testing the odd cycle
-//        boolean hasOddCycle = ChromaticMethods.hasOddCycle(adjacencyMatrix,n,e[0].u - 1);
-//        if (hasOddCycle) System.out.println("odd cycle found");
-//        else System.out.println("no odd cycle found");
-//        int[] degrees = ChromaticMethods.makeDegreeSet(adjacencyMatrix);
-
-        // testing graph class
-//        // testing clique finder
-//        int[] clique = new  SparseGraphLargestCliqueFinder().computeLargestClique(myGraph);
-
-
-//        System.out.println(Arrays.toString(clique));
-
-        // testing vertex list
-//        LinkedList vertexList = ChromaticMethods.makeSimpleVerticesList(n);
-//        System.out.println(solution);
-//        System.out.println("colors used: " + solution.size());
-
-        // test print degree array
-//        System.out.println("deg list: " + Arrays.toString(degrees));
-
-        // testing the indexofmax method
-//        //System.out.println("fakecolorlist index of max value: " + ChromaticMethods.indexOfMax(fakeColorlist));
-//        //System.out.println("fakesaturation index of max value: " + ChromaticMethods.indexOfMax(fakeSaturationlist));
-//
-//        // testing the indices with same value method
-//        //ArrayList<Integer> testlist = ChromaticMethods.elementsSameValue(fakeColorlist, 0);
-//        //System.out.println(testlist);
-//
-//        // testing adjacent colors list
-//        ArrayList<Integer> adjColorTest = ChromaticMethods.vertexAdjacentColorsSet(a, fakeColorlist, 0);
-//        System.out.println(adjColorTest);
-//
-//        // testing vertex selection
-//        int vC = ChromaticMethods.selectVertexDSATUR(fakeSaturationlist, degs);
-//        System.out.println("the vertex to color is: " + vC);
-//
-//        // testing color assignment
-//        int chosenColor = ChromaticMethods.assignColorDSATUR(a, fakeColorlist, 0);
-//        System.out.println("the chosen color is: " + chosenColor);
-//        // testing the degree set making
-//        // int[] degSet = ChromaticMethods.makeDegreeSet(a);
-//        // System.out.println(Arrays.toString(degSet));
 
 
     }

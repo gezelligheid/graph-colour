@@ -1,3 +1,11 @@
+/**
+ * Child class of the AbstractIntegerCombinationIterator that is used for a sparse graph largest clique finder
+ * <p>
+ * most credits go to:
+ *
+ * @author Rodion "rodde" Efremov
+ * * @version 1.6 (Jul 24, 2017)
+ */
 public final class ForwardIntCombinationIterator
         extends AbstractIntegerCombinationIterator {
 
