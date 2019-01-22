@@ -82,12 +82,12 @@ public class ChromaticMethods {
      * to detect odd cycles
      * the starting vertex preferably chosen in a connected part for extra speed
      * <p>
-     * <p>
      * inspired by: https://www.geeksforgeeks.org/check-graphs-cycle-odd-length/
      *
      * @param adjacencyMatrix the graph
      * @param vertices        mumber of vertices of the graph
      * @param start           starting vertex index
+     * @return true if an odd cycle exists, false otherwisw
      */
     public static boolean hasOddCycle(boolean[][] adjacencyMatrix, int vertices, int start) {
         // define local variables
@@ -185,7 +185,6 @@ public class ChromaticMethods {
     }
 
 
-
     /**
      * provides a graph coloring based on the degree of saturation algorithm
      *
@@ -207,34 +206,32 @@ public class ChromaticMethods {
         return colorList;
     }
 
-    /**
-     * not fully implemented
-     */
-    public static int[] colorWelshPowell(boolean[][] adjacencyMatrix) {
-        int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
-        int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
-        int activeColor = 1;
 
-        while (containsZero(cL)) {
-            int selectedVertex = indexOfMax(degrees); // select highest degree vertex
-            cL[selectedVertex] = activeColor; // highest degree vertex get first color
-            ArrayList<Integer> nonAdjacentSet = uncoloredNotAdjacentSet(adjacencyMatrix, cL, selectedVertex);
-            while (nonAdjacentSet.size() > 0) {
-
-            }
-            degrees[selectedVertex] = -1; // as a means of excluding the vertex from selection
-            activeColor++;
-        }
-
-
-        return cL;
-    }
+//    public static int[] colorWelshPowell(boolean[][] adjacencyMatrix) {
+//        int[] cL = new int[adjacencyMatrix.length]; // containing all vertices with their color initially 0
+//        int[] degrees = makeDegreeSet(adjacencyMatrix); // set with vertices and their degree
+//        int activeColor = 1;
+//
+//        while (containsZero(cL)) {
+//            int selectedVertex = indexOfMax(degrees); // select highest degree vertex
+//            cL[selectedVertex] = activeColor; // highest degree vertex get first color
+//            ArrayList<Integer> nonAdjacentSet = uncoloredNotAdjacentSet(adjacencyMatrix, cL, selectedVertex);
+//            while (nonAdjacentSet.size() > 0) {
+//
+//            }
+//            degrees[selectedVertex] = -1; // as a means of excluding the vertex from selection
+//            activeColor++;
+//        }
+//
+//
+//        return cL;
+//    }
 
 
     /**
      * true if integer array contains a zero
      *
-     * @param array
+     * @param array an array
      * @return whether contains a zero value
      */
     public static boolean containsZero(int[] array) {
@@ -249,6 +246,7 @@ public class ChromaticMethods {
      *
      * @param adjacencyMatrix the matrix it is about
      * @param vertexIndex     the vertex index 0 to n
+     * @return the degree of a vertex
      */
     public static int singleVertexDegree(boolean[][] adjacencyMatrix, int vertexIndex) {
         int k = 0; // Variable to count the node's neighbours
@@ -264,7 +262,7 @@ public class ChromaticMethods {
     /**
      * generates array where index number represents a vertex, and the value its degree
      *
-     * @param adjacencyMatrix
+     * @param adjacencyMatrix the graph
      * @return array as described
      */
     public static int[] makeDegreeSet(boolean[][] adjacencyMatrix) {
@@ -367,7 +365,7 @@ public class ChromaticMethods {
     /**
      * index of maximum value of given integer array
      *
-     * @param array
+     * @param array the array
      * @return the index number of the maximum value
      */
     public static int indexOfMax(int[] array) {
@@ -418,9 +416,10 @@ public class ChromaticMethods {
      * vertex specified
      *
      * @param adjacencyMatrix the graph
-     * @param colorList the current coloring
-     * @param vertex the vertex for which the set is compiled
-     * @return  the set described above*/
+     * @param colorList       the current coloring
+     * @param vertex          the vertex for which the set is compiled
+     * @return the set described above
+     */
     public static ArrayList<Integer> uncoloredNotAdjacentSet(boolean[][] adjacencyMatrix, int[] colorList, int vertex) {
         ArrayList<Integer> set = new ArrayList<>(); // set to contain indices of uncolored non adjacent vertices
         for (int i = 0; i < colorList.length; i++) {
@@ -603,7 +602,7 @@ public class ChromaticMethods {
     /**
      * @param array the array to analyze
      * @return highest integer value in the array
-     * */
+     */
     public static int maxIntValueOfArray(int[] array) {
         int max = array[0];
         for (int i1 : array) {

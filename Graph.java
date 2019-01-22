@@ -32,8 +32,8 @@ public class Graph {
     /**
      * adds edge and immediately enlists the vertices specified
      *
-     * @param vertex1
-     * @param vertex2
+     * @param vertex1 end1
+     * @param vertex2 end2
      */
     public void edgeMake(int vertex1, int vertex2) {
         addVertex(vertex1); // both vertices added to the set
@@ -44,6 +44,8 @@ public class Graph {
 
     /**
      * create an adjacency map that contains only vertices that appear in some edge
+     *
+     * @param edges all known edges
      */
     public void fillAdjacencyMap(ColEdge[] edges) {
         for (ColEdge edge : edges) {
@@ -97,6 +99,8 @@ public class Graph {
     }
 
     /**
+     * @param vertex1 end1
+     * @param vertex2 end2
      * @return true whenever an edge between two vetices exist
      */
     public boolean edgeExists(int vertex1, int vertex2) {

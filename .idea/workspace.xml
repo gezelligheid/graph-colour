@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="testScope" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="project1-code:jar2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
+    <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="added documentation">
+      <change afterPath="$PROJECT_DIR$/documentation/AbstractIntegerCombinationIterator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/AbstractLargestCliqueFinder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/BackwardIntCombinationIterator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/ChromaticMethods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/ChromaticSolve.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/DenseGraphLargestCliqueFinder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/ForwardIntCombinationIterator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/Graph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/SparseGraphLargestCliqueFinder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-1.10.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/member-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/type-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/project1_code_jar2/graph.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/someResults.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/someResults.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +104,18 @@
     <option name="myElementSize" value="190" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7697561">
+    <splitter split-orientation="horizontal" split-proportion="0.68101764">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Graph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+                <state relative-caret-position="636">
+                  <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
                   <folding>
+                    <element signature="e#3308#3309#0" expanded="true" />
                     <element signature="e#3381#3382#0" expanded="true" />
+                    <element signature="e#3737#3738#0" expanded="true" />
                     <element signature="e#3779#3780#0" expanded="true" />
                   </folding>
                 </state>
@@ -45,8 +125,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="722">
-                  <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+                <state relative-caret-position="236">
+                  <caret line="154" selection-start-line="154" selection-end-line="154" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -55,21 +135,9 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/BruteForce.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="32" selection-start-line="32" selection-end-line="32" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
+                <state relative-caret-position="306">
                   <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -90,7 +158,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/AbstractIntegerCombinationIterator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
+                <state relative-caret-position="102">
                   <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="8" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -115,7 +183,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="845">
+                <state relative-caret-position="2567">
                   <caret line="159" selection-start-line="159" selection-end-line="159" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -124,7 +192,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BackwardIntCombinationIterator.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="221">
@@ -136,17 +204,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+                <state relative-caret-position="119">
+                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7939">
-                  <caret line="467" column="44" selection-start-line="467" selection-start-column="44" selection-end-line="467" selection-end-column="44" />
+                <state relative-caret-position="159">
+                  <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="imports" expanded="true" />
@@ -198,19 +269,22 @@
         <option value="$PROJECT_DIR$/mColoringProblem.java" />
         <option value="$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java" />
         <option value="$PROJECT_DIR$/BackwardIntCombinationIterator.java" />
-        <option value="$PROJECT_DIR$/ChromaticMethods.java" />
         <option value="$PROJECT_DIR$/ForwardIntCombinationIterator.java" />
         <option value="$PROJECT_DIR$/GenerateRandomGraph.java" />
         <option value="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" />
         <option value="$PROJECT_DIR$/ChromaticSolve.java" />
+        <option value="$PROJECT_DIR$/ChromaticMethods.java" />
         <option value="$PROJECT_DIR$/Graph.java" />
       </list>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="testScope" pattern="src:AbstractIntegerCombinationIterator||src:AbstractLargestCliqueFinder||src:BackwardIntCombinationIterator||src:ChromaticMethods||src:ChromaticSolve||src:DenseGraphLargestCliqueFinder||src:ForwardIntCombinationIterator||src:Graph||src:SparseGraphLargestCliqueFinder" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="width" value="2379" />
-    <option name="height" value="2104" />
+    <option name="x" value="7" />
+    <option name="width" value="2380" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -233,14 +307,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548165089017" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548188089234" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -309,7 +383,8 @@
       <workItem from="1547794340213" duration="27553000" />
       <workItem from="1547906383519" duration="11249000" />
       <workItem from="1548053385038" duration="23524000" />
-      <workItem from="1548139759529" duration="16239000" />
+      <workItem from="1548139759529" duration="16483000" />
+      <workItem from="1548185774076" duration="2816000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -626,17 +701,23 @@
       <option name="project" value="LOCAL" />
       <updated>1548164380816</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="new results">
+      <created>1548172545266</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1548172545267</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206872000" />
+    <option name="totallyTimeSpent" value="209932000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="0" width="1359" height="1202" extended-state="0" />
-    <editor active="true" />
+    <frame x="4" y="0" width="1360" height="1203" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21214451" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21505377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -646,17 +727,17 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.26168224" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.13466667" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41511193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32929105" />
       <window_info anchor="bottom" id="TMC Test Results" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32961932" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.103738315" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.10354478" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.34953272" />
       <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -675,9 +756,33 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sorted map of degree ready for testing" />
-    <MESSAGE value="some tweaking with welsh powell" />
     <MESSAGE value="test setup" />
     <MESSAGE value="minor progress on welsh-powell" />
     <MESSAGE value="changed variable name" />
@@ -701,7 +806,9 @@
     <MESSAGE value="removed redundant print" />
     <MESSAGE value="program ready for tournament" />
     <MESSAGE value="created method to remove cut vertices(single degree endpoints) from the graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="created method to remove cut vertices(single degree endpoints) from the graph" />
+    <MESSAGE value="new results" />
+    <MESSAGE value="added documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added documentation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ReadGraph.java" />
@@ -724,41 +831,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Visualiser.java" />
-    <entry file="file://$PROJECT_DIR$/BruteForce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ForwardIntCombinationIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7939">
-          <caret line="467" column="44" selection-start-line="467" selection-start-column="44" selection-end-line="467" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DenseGraphLargestCliqueFinder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -769,10 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AbstractIntegerCombinationIterator.java">
+    <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -786,13 +858,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
+    <entry file="file://$PROJECT_DIR$/AbstractIntegerCombinationIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="102">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="8" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForwardIntCombinationIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -803,10 +882,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BruteForce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="236">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -815,10 +925,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="636">
+          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
           <folding>
+            <element signature="e#3308#3309#0" expanded="true" />
             <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3737#3738#0" expanded="true" />
             <element signature="e#3779#3780#0" expanded="true" />
           </folding>
         </state>
@@ -898,6 +1010,21 @@
               </list>
             </option>
           </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>testScope</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="testScope" />
+          </order>
         </settings>
       </state>
     </states>
