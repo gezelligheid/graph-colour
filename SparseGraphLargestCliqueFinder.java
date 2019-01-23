@@ -40,9 +40,10 @@ public final class SparseGraphLargestCliqueFinder
             if (isClique(graph, clique) && bestClique.size() < clique.size()) {
                 bestClique.clear();
                 bestClique.addAll(clique);
-                if (clique.size() > 3)
+                if (clique.size() > 3) {
                     System.out.println("NEW BEST LOWER BOUND = " + clique.size());
                     ChromaticSolve.printTime();
+                }
             }
         }
 
