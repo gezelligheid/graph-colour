@@ -12,6 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92a83131-2ebb-41bf-b453-df8003329fea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChromaticSolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChromaticSolve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,29 +31,23 @@
     <option name="myElementSize" value="190" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.68101764">
+    <splitter split-orientation="horizontal" split-proportion="0.71119845">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Graph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
-                  <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#3308#3309#0" expanded="true" />
-                    <element signature="e#3381#3382#0" expanded="true" />
-                    <element signature="e#3737#3738#0" expanded="true" />
-                    <element signature="e#3779#3780#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="841">
+                  <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="236">
-                  <caret line="154" selection-start-line="154" selection-end-line="154" />
+                <state relative-caret-position="161">
+                  <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -62,8 +58,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+                <state relative-caret-position="748">
+                  <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -109,7 +105,7 @@
             <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2567">
-                  <caret line="159" selection-start-line="159" selection-end-line="159" />
+                  <caret line="162" selection-start-line="162" selection-end-line="162" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -129,7 +125,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
+                <state relative-caret-position="51">
                   <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -141,7 +137,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="159">
+                <state relative-caret-position="4812">
                   <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -196,10 +192,10 @@
         <option value="$PROJECT_DIR$/BackwardIntCombinationIterator.java" />
         <option value="$PROJECT_DIR$/ForwardIntCombinationIterator.java" />
         <option value="$PROJECT_DIR$/GenerateRandomGraph.java" />
-        <option value="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" />
-        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
         <option value="$PROJECT_DIR$/ChromaticMethods.java" />
         <option value="$PROJECT_DIR$/Graph.java" />
+        <option value="$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java" />
+        <option value="$PROJECT_DIR$/ChromaticSolve.java" />
       </list>
     </option>
   </component>
@@ -209,13 +205,15 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
     <option name="width" value="2380" />
-    <option name="height" value="2106" />
+    <option name="height" value="2107" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,14 +230,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548188898541" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548188980705" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -310,6 +306,7 @@
       <workItem from="1548053385038" duration="23524000" />
       <workItem from="1548139759529" duration="16483000" />
       <workItem from="1548185774076" duration="3108000" />
+      <workItem from="1548239724459" duration="3559000" />
     </task>
     <task id="LOCAL-00001" summary="skelleton with intention for DSATUR algorithm set up">
       <created>1546251798152</created>
@@ -644,7 +641,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210224000" />
+    <option name="totallyTimeSpent" value="213783000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -656,10 +653,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="0" width="1360" height="1203" extended-state="1" />
+    <frame x="4" y="0" width="1360" height="1204" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21505377" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21812595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -719,6 +716,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -783,12 +794,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
+    <entry file="file://$PROJECT_DIR$/BruteForce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -824,19 +835,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BruteForce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GenerateRandomGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="51">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -846,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromaticMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="4812">
           <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -855,25 +856,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
+    <entry file="file://$PROJECT_DIR$/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="841">
+          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparseGraphLargestCliqueFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
+    <entry file="file://$PROJECT_DIR$/ChromaticSolve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+        <state relative-caret-position="161">
+          <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
           <folding>
-            <element signature="e#3308#3309#0" expanded="true" />
-            <element signature="e#3381#3382#0" expanded="true" />
-            <element signature="e#3737#3738#0" expanded="true" />
-            <element signature="e#3779#3780#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

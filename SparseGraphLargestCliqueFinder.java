@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * This clique finder starts to search trivial cliques of one node. The 
+ * This clique finder starts to search trivial cliques of one node. The
  * algorithm caches the largest tentative clique of size {@code k}. If at some
  * point it cannot find a clique of size {@code k + 1}, it returns the cached
  * clique. Needless to say, this is algorithm is best applied to sparse graphs.
@@ -19,7 +19,8 @@ public final class SparseGraphLargestCliqueFinder
      * therefore it makes sense to record this intermittently in some way
      *
      * @param graph the graph to analyze
-     * @return the best clique when now larger clique is possible*/
+     * @return the best clique when now larger clique is possible
+     */
     @Override
     public int[] computeLargestClique(Graph graph) {
         Objects.requireNonNull(graph, "The input graph is null.");
@@ -41,6 +42,7 @@ public final class SparseGraphLargestCliqueFinder
                 bestClique.addAll(clique);
                 if (clique.size() > 3)
                     System.out.println("NEW BEST LOWER BOUND = " + clique.size());
+                    ChromaticSolve.printTime();
             }
         }
 

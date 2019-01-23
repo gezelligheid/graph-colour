@@ -44,6 +44,8 @@ public class ChromaticSolve {
 
     public static int[] coloring;
 
+    public static long starttime;
+
     public static void main(String[] args) {
         if (args.length < 1) {
             System.out.println("Error! No filename specified.");
@@ -144,6 +146,7 @@ public class ChromaticSolve {
         //! INSERT YOUR CODE HERE!
 
         // some variables
+        starttime = System.currentTimeMillis();
         adjacencyMatrix = ChromaticMethods.makeAdjacencyMatrix(n, e);
         adjacencyIntegerMatrix = ChromaticMethods.makeIntegerAdjacencyMatrix(n, e);
 //        final ArrayList<Integer>[] adjacencyArrayList = ChromaticMethods.makeAdjacencyArrayList(n, e);
@@ -171,15 +174,20 @@ public class ChromaticSolve {
         // complete graphs have chromatic number equal to their number of vertices
         if (Math.abs(density - 1) < 0.000000001)
             System.out.println(exactPrint + n);
-        else if (!ChromaticMethods.hasOddCycle(adjacencyMatrix, n, e[0].u - 1))
+        else if (!ChromaticMethods.hasOddCycle(adjacencyMatrix, n, e[0].u - 1)){
             System.out.println(exactPrint + 2);
-        else {
+            printTime();
+        }
+
+        else{
             lowerBound = Math.max(3, gellerLowerBound);
             System.out.println(lowerPrint + lowerBound);
+            printTime();
 
             coloring = ChromaticMethods.colorDSATUR(adjacencyMatrix);
             upperBound = ChromaticMethods.maxIntValueOfArray(coloring);
             System.out.println(upperPrint + upperBound);
+            printTime();
 
             while (upperBound != lowerBound) {
                 ExecutorService service = Executors.newFixedThreadPool(2);
@@ -207,13 +215,9 @@ public class ChromaticSolve {
         }
 
 
-
-
         // testing RLF
 //        LinkedList<LinkedList<Integer>> solution = ChromaticMethods.colorRecursiveLargestFirst(adjacencyArrayList,
 //                solutionSet,candidates,excluded, coloredVertices);
-
-
 
 
     }
@@ -240,10 +244,16 @@ public class ChromaticSolve {
                     System.out.println(exactPrint + upperBound);
                     break;
                 }
+                printTime();
             }
             return chromaticNumber;
         }
     }
 
+    public static void printTime() {
+        System.out.println("In " +
+                (ChromaticSolve.starttime - System.currentTimeMillis()) +
+                " milliseconds");
+    }
 
 }
